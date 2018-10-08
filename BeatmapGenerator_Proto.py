@@ -12,7 +12,7 @@
 
 # Generate a note
 def create_note(structure = None):
-"""
+    """
     create_note(structure = None) simply creates a single note
 
     Case 1: When no structure is passed, the user is prompted to enter all
@@ -20,9 +20,9 @@ def create_note(structure = None):
 
     Case 2: When a structure is passed, every entry is copied over
 
-    *** NOTE: BECAUSE THIS IS A DEVELOPER TOOL ONLY, ERROR CHECKING WILL NOT
-    BE ADDED UNTIL LATER
-"""
+    *** BECAUSE THIS IS A DEVELOPER TOOL ONLY, ERROR CHECKING WILL BE ADDED
+    LATER ***
+    """
     note = {}
 
     '''
@@ -34,20 +34,26 @@ def create_note(structure = None):
         note['Right'] = structure['Right']input()
     '''
 
-    else:
-        note['TimeToWait'] = structure['TimeToWait']
-        note['Up']    = structure['Up']
-        note['Down']  = structure['Down']
-        note['Left']  = structure['Left']
-        note['Right'] = structure['Right']
+    #else:
+    note['TimeToWait'] = structure['TimeToWait']
+    note['Up']    = structure['Up']
+    note['Down']  = structure['Down']
+    note['Left']  = structure['Left']
+    note['Right'] = structure['Right']
 
     return note
 
 def show_beatmap():
-"""
+    """
     show_beatmap() displays all of the available beatmap data in the following
     format
 
     Note #n - TIME INITIATED: t [s]
     noteN = {'TimeToWait' : t, 'Up' : BOOL, 'Down' : BOOL, 'Left' : BOOL, 'Right' : BOOL}
-"""
+
+    *** BECAUSE THIS IS A DEVELOPER TOOL ONLY, ERROR CHECKING WILL BE ADDED
+    LATER ***
+    """
+    with open('beatmap.txt') as f:
+        for line in f:
+            line.readline()
