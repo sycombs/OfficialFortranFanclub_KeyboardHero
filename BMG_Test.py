@@ -15,7 +15,7 @@ with open('beatmap.txt', 'w+') as f:
     while timeElapsed < 198:
 
         f.write("Note: " + str(noteCount) +  " - TIME INITIATED:" + str(timeElapsed) + " [s]")
-        f.write("\n")
+        #f.write("\n")
 
         # Random seed
         n = random.randint(0, 3)
@@ -30,9 +30,12 @@ with open('beatmap.txt', 'w+') as f:
             someDict = {'TimeToWait' : n, 'Up' : False, 'Down' : False, 'Left' : False, 'Right' : True}
 
         f.writelines(str(someDict))
-        f.write("\n\n")
+        f.write("\n")
 
         noteCount += 1
         timeElapsed += n
 
     f.close()
+
+show_beatmap()
+#play_beatmap()

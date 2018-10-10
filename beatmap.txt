@@ -1,357 +1,138 @@
-Note: 0 - TIME INITIATED:0 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 1 - TIME INITIATED:3 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 2 - TIME INITIATED:5 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 3 - TIME INITIATED:8 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 4 - TIME INITIATED:8 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 5 - TIME INITIATED:9 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 6 - TIME INITIATED:11 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 7 - TIME INITIATED:13 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 8 - TIME INITIATED:14 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 9 - TIME INITIATED:17 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 10 - TIME INITIATED:19 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 11 - TIME INITIATED:19 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 12 - TIME INITIATED:19 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 13 - TIME INITIATED:19 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 14 - TIME INITIATED:22 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 15 - TIME INITIATED:25 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 16 - TIME INITIATED:27 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 17 - TIME INITIATED:30 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 18 - TIME INITIATED:32 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 19 - TIME INITIATED:34 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 20 - TIME INITIATED:37 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 21 - TIME INITIATED:38 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 22 - TIME INITIATED:40 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 23 - TIME INITIATED:43 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 24 - TIME INITIATED:45 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 25 - TIME INITIATED:48 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 26 - TIME INITIATED:51 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 27 - TIME INITIATED:54 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 28 - TIME INITIATED:57 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 29 - TIME INITIATED:59 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 30 - TIME INITIATED:59 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 31 - TIME INITIATED:62 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 32 - TIME INITIATED:64 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 33 - TIME INITIATED:67 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 34 - TIME INITIATED:69 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 35 - TIME INITIATED:72 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 36 - TIME INITIATED:72 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 37 - TIME INITIATED:75 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 38 - TIME INITIATED:78 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 39 - TIME INITIATED:79 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 40 - TIME INITIATED:82 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 41 - TIME INITIATED:82 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 42 - TIME INITIATED:82 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 43 - TIME INITIATED:83 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 44 - TIME INITIATED:86 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 45 - TIME INITIATED:88 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 46 - TIME INITIATED:90 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 47 - TIME INITIATED:91 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 48 - TIME INITIATED:93 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 49 - TIME INITIATED:94 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 50 - TIME INITIATED:95 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 51 - TIME INITIATED:98 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 52 - TIME INITIATED:101 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 53 - TIME INITIATED:104 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 54 - TIME INITIATED:104 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 55 - TIME INITIATED:104 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 56 - TIME INITIATED:104 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 57 - TIME INITIATED:107 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 58 - TIME INITIATED:110 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 59 - TIME INITIATED:112 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 60 - TIME INITIATED:113 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 61 - TIME INITIATED:113 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 62 - TIME INITIATED:114 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 63 - TIME INITIATED:117 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 64 - TIME INITIATED:118 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 65 - TIME INITIATED:120 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 66 - TIME INITIATED:120 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 67 - TIME INITIATED:122 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 68 - TIME INITIATED:123 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 69 - TIME INITIATED:126 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 70 - TIME INITIATED:128 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 71 - TIME INITIATED:128 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 72 - TIME INITIATED:131 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 73 - TIME INITIATED:132 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 74 - TIME INITIATED:132 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 75 - TIME INITIATED:135 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 76 - TIME INITIATED:136 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 77 - TIME INITIATED:138 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 78 - TIME INITIATED:140 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 79 - TIME INITIATED:142 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 80 - TIME INITIATED:143 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 81 - TIME INITIATED:143 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 82 - TIME INITIATED:145 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 83 - TIME INITIATED:146 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 84 - TIME INITIATED:146 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 85 - TIME INITIATED:146 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 86 - TIME INITIATED:146 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 87 - TIME INITIATED:148 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 88 - TIME INITIATED:148 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 89 - TIME INITIATED:148 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 90 - TIME INITIATED:150 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 91 - TIME INITIATED:152 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 92 - TIME INITIATED:155 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 93 - TIME INITIATED:156 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 94 - TIME INITIATED:158 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 95 - TIME INITIATED:160 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 96 - TIME INITIATED:161 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 97 - TIME INITIATED:164 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 98 - TIME INITIATED:164 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 99 - TIME INITIATED:164 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 100 - TIME INITIATED:165 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 101 - TIME INITIATED:168 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 102 - TIME INITIATED:170 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 103 - TIME INITIATED:173 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 104 - TIME INITIATED:174 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 105 - TIME INITIATED:175 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 106 - TIME INITIATED:176 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 107 - TIME INITIATED:177 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 108 - TIME INITIATED:177 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 109 - TIME INITIATED:179 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 110 - TIME INITIATED:182 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 111 - TIME INITIATED:184 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 112 - TIME INITIATED:185 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 113 - TIME INITIATED:188 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 114 - TIME INITIATED:191 [s]
-{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
-
-Note: 115 - TIME INITIATED:191 [s]
-{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
-
-Note: 116 - TIME INITIATED:194 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
-Note: 117 - TIME INITIATED:196 [s]
-{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
-
-Note: 118 - TIME INITIATED:197 [s]
-{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
-
+Note: 0 - TIME INITIATED:0 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 1 - TIME INITIATED:0 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 2 - TIME INITIATED:0 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 3 - TIME INITIATED:3 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 4 - TIME INITIATED:6 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 5 - TIME INITIATED:9 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 6 - TIME INITIATED:11 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 7 - TIME INITIATED:11 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 8 - TIME INITIATED:12 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 9 - TIME INITIATED:13 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 10 - TIME INITIATED:16 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 11 - TIME INITIATED:19 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 12 - TIME INITIATED:19 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 13 - TIME INITIATED:22 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 14 - TIME INITIATED:22 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 15 - TIME INITIATED:23 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 16 - TIME INITIATED:25 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 17 - TIME INITIATED:28 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 18 - TIME INITIATED:30 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 19 - TIME INITIATED:32 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 20 - TIME INITIATED:35 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 21 - TIME INITIATED:36 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 22 - TIME INITIATED:39 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 23 - TIME INITIATED:39 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 24 - TIME INITIATED:39 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 25 - TIME INITIATED:41 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 26 - TIME INITIATED:42 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 27 - TIME INITIATED:42 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 28 - TIME INITIATED:44 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 29 - TIME INITIATED:47 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 30 - TIME INITIATED:47 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 31 - TIME INITIATED:48 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 32 - TIME INITIATED:48 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 33 - TIME INITIATED:49 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 34 - TIME INITIATED:52 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 35 - TIME INITIATED:55 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 36 - TIME INITIATED:56 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 37 - TIME INITIATED:57 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 38 - TIME INITIATED:58 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 39 - TIME INITIATED:60 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 40 - TIME INITIATED:63 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 41 - TIME INITIATED:63 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 42 - TIME INITIATED:66 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 43 - TIME INITIATED:69 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 44 - TIME INITIATED:69 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 45 - TIME INITIATED:69 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 46 - TIME INITIATED:72 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 47 - TIME INITIATED:74 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 48 - TIME INITIATED:77 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 49 - TIME INITIATED:79 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 50 - TIME INITIATED:80 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 51 - TIME INITIATED:80 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 52 - TIME INITIATED:82 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 53 - TIME INITIATED:82 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 54 - TIME INITIATED:85 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 55 - TIME INITIATED:87 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 56 - TIME INITIATED:87 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 57 - TIME INITIATED:89 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 58 - TIME INITIATED:90 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 59 - TIME INITIATED:90 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 60 - TIME INITIATED:91 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 61 - TIME INITIATED:92 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 62 - TIME INITIATED:92 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 63 - TIME INITIATED:94 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 64 - TIME INITIATED:97 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 65 - TIME INITIATED:98 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 66 - TIME INITIATED:99 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 67 - TIME INITIATED:102 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 68 - TIME INITIATED:103 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 69 - TIME INITIATED:105 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 70 - TIME INITIATED:108 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 71 - TIME INITIATED:108 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 72 - TIME INITIATED:109 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 73 - TIME INITIATED:112 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 74 - TIME INITIATED:113 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 75 - TIME INITIATED:114 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 76 - TIME INITIATED:115 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 77 - TIME INITIATED:115 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 78 - TIME INITIATED:115 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 79 - TIME INITIATED:118 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 80 - TIME INITIATED:120 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 81 - TIME INITIATED:121 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 82 - TIME INITIATED:122 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 83 - TIME INITIATED:124 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 84 - TIME INITIATED:127 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 85 - TIME INITIATED:128 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 86 - TIME INITIATED:131 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 87 - TIME INITIATED:134 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 88 - TIME INITIATED:134 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 89 - TIME INITIATED:137 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 90 - TIME INITIATED:137 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 91 - TIME INITIATED:137 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 92 - TIME INITIATED:138 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 93 - TIME INITIATED:139 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 94 - TIME INITIATED:139 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 95 - TIME INITIATED:139 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 96 - TIME INITIATED:139 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 97 - TIME INITIATED:141 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 98 - TIME INITIATED:142 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 99 - TIME INITIATED:145 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 100 - TIME INITIATED:147 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 101 - TIME INITIATED:150 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 102 - TIME INITIATED:150 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 103 - TIME INITIATED:152 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 104 - TIME INITIATED:154 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 105 - TIME INITIATED:156 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 106 - TIME INITIATED:156 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 107 - TIME INITIATED:159 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 108 - TIME INITIATED:159 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 109 - TIME INITIATED:160 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 110 - TIME INITIATED:161 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 111 - TIME INITIATED:162 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 112 - TIME INITIATED:163 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 113 - TIME INITIATED:164 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 114 - TIME INITIATED:165 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 115 - TIME INITIATED:165 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 116 - TIME INITIATED:167 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 117 - TIME INITIATED:167 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 118 - TIME INITIATED:167 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 119 - TIME INITIATED:168 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
+Note: 120 - TIME INITIATED:170 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 121 - TIME INITIATED:173 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 122 - TIME INITIATED:176 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 123 - TIME INITIATED:179 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 124 - TIME INITIATED:180 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 125 - TIME INITIATED:181 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 126 - TIME INITIATED:181 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 127 - TIME INITIATED:181 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 128 - TIME INITIATED:182 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 129 - TIME INITIATED:182 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 130 - TIME INITIATED:185 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 131 - TIME INITIATED:186 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 132 - TIME INITIATED:189 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 133 - TIME INITIATED:189 [s]{'TimeToWait': 1, 'Up': False, 'Down': True, 'Left': False, 'Right': False}
+Note: 134 - TIME INITIATED:190 [s]{'TimeToWait': 0, 'Up': True, 'Down': False, 'Left': False, 'Right': False}
+Note: 135 - TIME INITIATED:190 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 136 - TIME INITIATED:193 [s]{'TimeToWait': 3, 'Up': False, 'Down': False, 'Left': False, 'Right': True}
+Note: 137 - TIME INITIATED:196 [s]{'TimeToWait': 2, 'Up': False, 'Down': False, 'Left': True, 'Right': False}
