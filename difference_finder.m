@@ -128,6 +128,10 @@ The extra frames are necessarily large because even just 1/10th of a second
 contains 735 frames...
 #}
 
+
+#{
+  This only plays the audio so we can ignore it for now
+  
 i = 1;
 while i < rows(triggers)
   pA = triggers(i) - (7*3012);
@@ -137,13 +141,20 @@ while i < rows(triggers)
   play (player);
   i = i + 1;
   endwhile
-
-
-noteNum = 1;
-timeInitiated = 1.0;
-timeUntilNextNote = 0.5;
+#}
 
 # Output the 'notes' to our beatmap file
-printf('Note #%i - TIME INITIATED: %f [sec]\n', noteNum, timeInitiated);
-printf("Note: ['Wait' : %f, 'Up': False]", timeUntilNextNote);
- #display(rows(triggers));
+#printf("Note: ['Wait' : %f, 'Up': False]", timeUntilNextNote);
+
+file = fopen("output.txt", "w");
+
+i = 1;
+while i <= rows(triggers)
+  oStr1 = strjoin({'Note #', int2str(i)});
+  oStr2 = strjoin({' - Activation Frame: ', int2str(triggers(i))});
+  oStr3 = strjoin({oStr1, oStr2});
+  fdisp(file, oStr3);#, fdisp(file, '1');# - TIME INITIATED: %f [sec]\n', noteNum, timeInitiated);
+  i = i + 1;
+endwhile
+
+fclose(file);
