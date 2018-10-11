@@ -59,7 +59,7 @@ This is where we actually check for differences in the audio data.
     samp1 = [frame_x0, frame_x1]
     samp2 = [frame_x2, frame_x3]
     
-    where frame_x2 is just frame_x1 + 1. Currently each sample represents 1/10th
+    where frame_x2 is just frame_x1 + 1. Currently each sample represents 1/60th
     of a second
 
   3) Take the sum of all the elements in each sample
@@ -90,7 +90,8 @@ framePointer = 0;
 
 # Initialize an empty list to store our triggers ... in case it's not obvious
 triggers = [];
-thing = [];
+
+diffThreshold = 30; # This might be determined via code later on
 
 while framePointer < partition
   
@@ -107,12 +108,10 @@ while framePointer < partition
   sampSum1 = sum(rawAudioData(f_0:1:f_1));
   sampSum2 = sum(rawAudioData(f_2:1:f_3));
   
-  d = abs(sampSum2 - sampSum1);
-  if d > 30
-  #if (abs(sampSum2 - sampSum1) > 80)
+  
+  if abs(sampSum2 - sampSum1) > diffThreshold;
       #display(samp2 - samp1_
       #printf("f_1: %i     f_2: %i     f_3: %i     f_4: %i \n", f_0, f_1, f_2, f_3);
-      thing = vertcat(thing, d);
       triggers = vertcat(triggers, f_1);
   endif
   
@@ -124,13 +123,13 @@ For testing purposes only, take the list of triggers from above and play them
 back. We have to add (a large) number of frames on either side of our trigger
 in order to hear anything
 
-The extra frames are necessarily large because even just 1/10th of a second
+The extra frames are necessarily large because even just 1/60th of a second
 contains 735 frames...
 #}
 
 
-#{
-  This only plays the audio so we can ignore it for now
+# aaa{
+  #This only plays the audio so we can ignore it for now
   
 i = 1;
 while i < rows(triggers)
@@ -141,13 +140,13 @@ while i < rows(triggers)
   play (player);
   i = i + 1;
   endwhile
-#}
+# aaa}
 
 # Output the 'notes' to our beatmap file
 #printf("Note: ['Wait' : %f, 'Up': False]", timeUntilNextNote);
 
 file = fopen("output.txt", "w");
-
+# aaa{
 i = 1;
 while i <= rows(triggers)
   oStr1 = strjoin({'Note #', int2str(i)});
@@ -158,3 +157,4 @@ while i <= rows(triggers)
 endwhile
 
 fclose(file);
+# aaa}
