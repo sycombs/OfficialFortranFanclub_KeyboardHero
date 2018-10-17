@@ -1,35 +1,47 @@
+--a = [[1, 2], [1, 2], [1, 2], [1, 2]]
+
 import System.IO
 import Data.WAVE
 import Data.List
-import Data.List.Split
 import Data.Int
 
 import System.Process
-import Control.Concurrent
+import Control.Parallel
 import System.Exit
 
+-- 7791616
+-- ^ Current song length
+-- Filter the results!
 
 main = do
    h <- openFile "song.wav" ReadMode
-   wav <- hGetWAVE h
+   wav <- getWAVEFile "song.wav"
    let samples = waveSamples wav
---   return samples
-   return (take 2646000 samples) -- 60 second chunk, the program crashes otherwise
+   let song_length = (length samples)
 
--- Currently only takes the left (?) channel data into consideration
---p :: [Int] -> [Int]
-p xs = [x | x <- map (\x -> head x) xs]
+   let halfLength = (song_length `div` 2)
+   let firstHalf  = take halfLength samples
+   let secondHalf = drop halfLength samples
 
-diff :: [WAVESample] -> WAVESample
+   let quartLength = halfLength `div` 2 -- Or is song_length / 4 better?
+ 
+   --let q1 = take quartLength firstHalf
+--   let q2 = drop quartLength firstHalf
+--   let q3 = take quartLength secondHalf
+--   let q4 = drop quartLength secondHalf
 
--- Since we're passing one partition, just take the front and back half by reversing
--- the list ('partition') we passed
-diff xs = n0 - n1
-   where n0 = sum (take 735 xs)
-         n1 = sum (take 735 (reverse xs))
+--   leftChannel only ATM
+
+--   let imp1 = (listImpulses (firstHalf `div` 2)) `par` (listImpulses ( `div` 2))
+   let imp1 = (listImpulses (take quartLength firstHalf)) `par` (listImpulses (drop quartLength firstHalf))
+   let imp2 = (listImpulses (take quartLength secondHalf)) `par` (listImpulses (drop quartLength secondHalf))
+
+   print (length imp1)
 
 
-eL :: [WAVESample] -> [WAVESample] -- What did eL stand for again?
-eL xs
-   | length xs <= 0 = []
-   | otherwise = [diff (take 1470 xs)] ++ (eL (drop 1470 xs))
+--listImpulses :: [WAVESample] -> [WAVESample]
+
+listImpulses [] = []
+listImpulses xs = [((h' - t') `div` 5000)] ++ (listImpulses (drop 1470 xs))
+   where h' = foldl' (+) 0 [h | h <- map (\a -> head a) (take 735 xs)]
+         t' = foldl' (+) 0 [t | t <- map (\b -> last b) (take 735 (drop 735 xs))]
