@@ -78,3 +78,42 @@ class key_button(gui_button):
         super().__init__(self, color, x, y, width, height, text)
 
     #TODO: implement draw function which draws picture at location instead of text
+
+class Note:
+    '''
+    @brief the note class contains the pygame rect object to test
+    for collison against key buttons
+    '''
+
+    def __init__(self, type, x, y):
+        '''
+        @brief constructor for note object
+        @param: type: string: looks for left, up, down, right, circle
+        @param: x: int: x position(left edge)
+        @param: y: int: y position(top edge)
+        '''
+        self.type = type
+        self.x = x
+        self.y = y
+        self.width = 20
+        self.height = 20
+        self.color = (0,255,0)
+        self.rect = pygame.rect.Rect(x,y,self.width, self.height)
+
+    def place(self,x,y):
+        '''
+        @brief function to change x,y pos
+        @param: x: int: x pos (left edge)
+        @param: y: int: y pos(top edge)
+        '''
+        self.x = x
+        self.y = y
+    def draw(self,window):
+        '''
+        @brief function which draws the note to the window at (self.x,self.y)
+        @brief draws black outline around rect which is currently 20x20
+        @param: window: Pygame Surface: surface on which to draw window
+        '''
+        pygame.draw.rect(window,(0,0,0),(self.x -2,self.y-2,self.width+4,self.height+4),0)
+        pygame.draw.rect(window,self.color,(self.x,self.y,self.width,self.height))
+        #TODO: add image for left,up, etc
