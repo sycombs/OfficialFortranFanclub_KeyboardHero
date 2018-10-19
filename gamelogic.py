@@ -1,5 +1,5 @@
 import pygame
-from note import note
+import ast
 
 def convert_beatmap(file = "beatmap.txt"):
     """
@@ -19,48 +19,40 @@ def convert_beatmap(file = "beatmap.txt"):
     YELLOW = [255, 203, 73] #Yellow! Down.
     ORANGE = [255, 77, 22] #Orange! Right.
 
-    SIZE = [800, 600] #might want to make this smaller. just look at it. the notes are humongous
+    SIZE = [800, 600]
 
     screen = pygame.display.set_mode(SIZE)
     pygame.display.set_caption("Make Notes Fall")
 
     note_list = []
 
-    #currently struggling with the dictionary :(
-    #Stuff that doesn't work :(((((
-    """
     f = open(file, 'r')
     if f.mode == 'r':
-        current_note = note()
         beatmap = f.read().split('\n')
-        print(beatmap);
 
-    for i in range(len(beatmap)):
-        if beatmap[i]['Up']:
-            note_list.append([300, -10])
-        elif beatmap[i]['Down']:
-            note_list.append([500, -10])
-        elif beatmap[i]['Left']:
-            note_list.append([100, -10])
+    beatmap_arr = []
+    for i in range(1, len(beatmap), 2):
+        current_note = ast.literal_eval(beatmap[i])
+        beatmap_arr.append(current_note)
+
+    for i in range(len(beatmap_arr)):
+        if beatmap_arr[i]['Up']:
+            note_list.append([200, -10])
+        elif beatmap_arr[i]['Down']:
+            note_list.append([400, -10])
+        elif beatmap_arr[i]['Left']:
+            note_list.append([0, -10])
         else:
-            note_list.append([700, -10])
-
-    """
-
-    note_list.append([0, -10]) #Left
-    note_list.append([200, -10]) #Up
-    note_list.append([400, -10]) #Down
-    note_list.append([600, -10]) #Right
+            note_list.append([600, -10])
 
     clock = pygame.time.Clock()
 
-    # Loop until the user clicks the close button.
     done = False
     while not done:
 
-        for event in pygame.event.get():   # User did something
-            if event.type == pygame.QUIT:  # If user clicked close
-                done = True   # Flag that we are done so we exit this loop
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                done = True
 
         screen.fill(BLACK)
 
@@ -73,10 +65,9 @@ def convert_beatmap(file = "beatmap.txt"):
                 pygame.draw.rect(screen, YELLOW, (note_list[i][0], note_list[i][1], 200, 200))
             else:
                 pygame.draw.rect(screen, ORANGE, (note_list[i][0], note_list[i][1], 200, 200))
-            # pygame.draw.rect(screen, BLUE, (note_list[i][0], note_list[i][1], 200, 200))
-            note_list[i][1] += 1 #Increments the y-coordinate
+            note_list[i][1] += 1 #Increments on y
 
-            # Loops the note animation for now because i can't get the note information because I am bad
+            # Loops the note animation for now
             if note_list[i][1] > 800:
                 y = -100
                 note_list[i][1] = y
@@ -86,9 +77,5 @@ def convert_beatmap(file = "beatmap.txt"):
 
     pygame.quit()
 
-    def get_note(str):
-        current_note = 0
-        #this is nothing
 
-
-convert_beatmap("beatmap.txt")
+convert_beatmap("output.txt")
