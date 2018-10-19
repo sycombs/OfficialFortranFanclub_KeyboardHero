@@ -1,3 +1,4 @@
+clear;
 #{
   difference_finder.m
  
@@ -43,8 +44,8 @@ rowCount = rows(rawAudioData)
 frameCount = rowCount / 60;
 
 # CHECK THIS SO THAT YOU ALWAYS GET A NICE CLEAN CUT
-partition = (rowCount)/(2 * 735);
-display(partition);
+#partition = (rowCount)/(2 * 735);
+#display(partition);
 #{
 This is where we actually check for differences in the audio data. 
 
@@ -94,7 +95,14 @@ triggers = [];
 
 file = fopen("output.txt", "w");
 
-while framePointer < partition
+a = rowCount / 1450;
+
+#{
+else
+    #sampSum2 = sum(rawAudioData(f_2:1:f_3));
+#}
+
+while framePointer < a
   
   #{
   *** CHANGE 735 TO THE APPROPRIATE VARIABLE ***
@@ -103,18 +111,24 @@ while framePointer < partition
   f_0 = (735 * 2 * framePointer) + 1;
   f_1 = f_0 + 735;
   
-  f_2 = (735 * (2 * framePointer + 1)) + 2;
-  f_3 = (735 * 2 * (framePointer + 1));
-
+  f_2 = f_1 + 735;
+  f_3 = f_2 + 735;
+  
   sampSum1 = sum(rawAudioData(f_0:1:f_1));
   sampSum2 = sum(rawAudioData(f_2:1:f_3));
   
+  #if ((f_0 + 1500) > rowCount)
+    #display(f_3);
+  #endif
+  
+  
+  
   diff = abs(sampSum2 - sampSum1);
   
-  highT = 70;
-  medT  = 65;
-  lowT  = 60;
-  minT  = 55;
+  highT = 40;
+  medT  = 35;
+  lowT  = 30;
+  minT  = 25;
   
   up    = 0;
   down  = 0;
@@ -122,7 +136,7 @@ while framePointer < partition
   right = 0;
     
   objCount = rows(triggers) + 1;
-  
+
   # High
   if highT <= diff
       up    = 1;
@@ -162,11 +176,12 @@ while framePointer < partition
     triggers = vertcat(triggers, f_1);
   endif
   
+  
   if ((up == 1) || (down == 1)) || ((left == 1) || (right == 1))
     #oStr1 = strjoin({'Note #', int2str(objCount)});
     #oStr2 = strjoin({' - Activation Frame: ', int2str(triggers(i))});
     #oStr3 = strjoin({oStr1, oStr2});
-    fprintf(file, "Note # %i - Activation Frame: %i \n", rows(triggers), framePointer);
+    fprintf(file, "Note # %i - Activation Frame: %i \n", rows(triggers), f_1);
     #fdisp(file, oStr3);#, fdisp(file, '1');# - TIME INITIATED: %f [sec]\n', noteNum, timeInitiated);
     #oString = "{'Up' : %i, 'Down' : %i, 'Left' : %i, 'Right' : %i} \n", up, down, left, right;
     #printf("{'Up' : %i, 'Down' : %i, 'Left' : %i, 'Right' : %i} \n", up, down, left, right);
@@ -175,7 +190,7 @@ while framePointer < partition
       #printf(file, oString);
       fprintf(file, "{'Up' : %i, 'Down' : %i, 'Left' : %i, 'Right' : %i} \n", up, down, left, right);
   endif
-  
+  framePointer = framePointer + 1;
   framePointer = framePointer + 1;
 endwhile
 
@@ -194,7 +209,7 @@ contains 735 frames...
 
 
 #This only plays the audio so we can ignore it for now
-#{
+
 i = 1;
 while i < rows(triggers)
   pA = triggers(i) - (7*3012);
@@ -204,7 +219,7 @@ while i < rows(triggers)
   play (player);
   i = i + 1;
 endwhile
-#}
+
 
 # Output the 'notes' to our beatmap file
 #printf("Note: ['Wait' : %f, 'Up': False]", timeUntilNextNote);
