@@ -1,108 +1,826 @@
-Note # 1 - Activation Frame: 426 
+Note # 1 - Activation Frame: 353536 
 {'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 2 - Activation Frame: 462 
+Note # 2 - Activation Frame: 356476 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 3 - Activation Frame: 365296 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 4 - Activation Frame: 371176 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 5 - Activation Frame: 374116 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 6 - Activation Frame: 388816 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 3 - Activation Frame: 487 
-{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 4 - Activation Frame: 503 
+Note # 7 - Activation Frame: 415276 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 8 - Activation Frame: 424096 
 {'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 5 - Activation Frame: 512 
+Note # 9 - Activation Frame: 432916 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 10 - Activation Frame: 444676 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 11 - Activation Frame: 459376 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 12 - Activation Frame: 468196 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 13 - Activation Frame: 526996 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 14 - Activation Frame: 535816 
 {'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 6 - Activation Frame: 569 
+Note # 15 - Activation Frame: 541696 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 16 - Activation Frame: 547576 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 17 - Activation Frame: 553456 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 18 - Activation Frame: 568156 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 19 - Activation Frame: 574036 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 20 - Activation Frame: 585796 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 7 - Activation Frame: 614 
-{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 8 - Activation Frame: 658 
+Note # 21 - Activation Frame: 588736 
 {'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 9 - Activation Frame: 735 
+Note # 22 - Activation Frame: 591676 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 23 - Activation Frame: 606376 
 {'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 10 - Activation Frame: 893 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 11 - Activation Frame: 1089 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 12 - Activation Frame: 1260 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 13 - Activation Frame: 1366 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 14 - Activation Frame: 1434 
+Note # 24 - Activation Frame: 621076 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 15 - Activation Frame: 1538 
-{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 16 - Activation Frame: 1641 
-{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 17 - Activation Frame: 1706 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 18 - Activation Frame: 1767 
-{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 19 - Activation Frame: 1783 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 20 - Activation Frame: 2005 
+Note # 25 - Activation Frame: 626956 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 21 - Activation Frame: 2248 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 22 - Activation Frame: 2297 
+Note # 26 - Activation Frame: 629896 
 {'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 23 - Activation Frame: 2324 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 24 - Activation Frame: 2361 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 25 - Activation Frame: 2400 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 26 - Activation Frame: 2434 
+Note # 27 - Activation Frame: 635776 
 {'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 27 - Activation Frame: 2476 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 28 - Activation Frame: 2744 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 29 - Activation Frame: 2920 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 30 - Activation Frame: 3074 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 31 - Activation Frame: 3564 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 32 - Activation Frame: 3580 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 33 - Activation Frame: 3615 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 34 - Activation Frame: 3631 
+Note # 28 - Activation Frame: 641656 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 29 - Activation Frame: 647536 
 {'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 35 - Activation Frame: 3733 
+Note # 30 - Activation Frame: 650476 
 {'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 36 - Activation Frame: 3792 
-{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 37 - Activation Frame: 3822 
+Note # 31 - Activation Frame: 659296 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 32 - Activation Frame: 662236 
 {'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
-Note # 38 - Activation Frame: 3897 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 39 - Activation Frame: 3927 
+Note # 33 - Activation Frame: 665176 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 40 - Activation Frame: 3965 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 41 - Activation Frame: 3966 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 42 - Activation Frame: 4078 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 43 - Activation Frame: 4136 
+Note # 34 - Activation Frame: 679876 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 44 - Activation Frame: 4378 
+Note # 35 - Activation Frame: 688696 
 {'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 45 - Activation Frame: 4388 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 46 - Activation Frame: 4447 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 47 - Activation Frame: 4513 
-{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 48 - Activation Frame: 4628 
-{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 49 - Activation Frame: 4713 
+Note # 36 - Activation Frame: 691636 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 50 - Activation Frame: 4747 
+Note # 37 - Activation Frame: 694576 
 {'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
-Note # 51 - Activation Frame: 4874 
+Note # 38 - Activation Frame: 697516 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 39 - Activation Frame: 700456 
 {'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 52 - Activation Frame: 4904 
+Note # 40 - Activation Frame: 706336 
 {'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
-Note # 53 - Activation Frame: 4919 
+Note # 41 - Activation Frame: 712216 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 42 - Activation Frame: 721036 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 43 - Activation Frame: 726916 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 44 - Activation Frame: 732796 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 45 - Activation Frame: 738676 
 {'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
-Note # 54 - Activation Frame: 5019 
+Note # 46 - Activation Frame: 741616 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 47 - Activation Frame: 759256 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 48 - Activation Frame: 765136 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 49 - Activation Frame: 771016 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 50 - Activation Frame: 773956 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 51 - Activation Frame: 788656 
 {'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 52 - Activation Frame: 791596 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 53 - Activation Frame: 797476 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 54 - Activation Frame: 806296 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 55 - Activation Frame: 835696 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 56 - Activation Frame: 868036 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 57 - Activation Frame: 879796 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 58 - Activation Frame: 882736 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 59 - Activation Frame: 926836 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 60 - Activation Frame: 929776 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 61 - Activation Frame: 956236 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 62 - Activation Frame: 967996 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 63 - Activation Frame: 1053256 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 64 - Activation Frame: 1062076 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 65 - Activation Frame: 1079716 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 66 - Activation Frame: 1082656 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 67 - Activation Frame: 1129696 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 68 - Activation Frame: 1150276 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 69 - Activation Frame: 1153216 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 70 - Activation Frame: 1156156 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 71 - Activation Frame: 1173796 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 72 - Activation Frame: 1179676 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 73 - Activation Frame: 1182616 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 74 - Activation Frame: 1203196 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 75 - Activation Frame: 1206136 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 76 - Activation Frame: 1220836 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 77 - Activation Frame: 1223776 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 78 - Activation Frame: 1247296 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 79 - Activation Frame: 1253176 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 80 - Activation Frame: 1259056 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 81 - Activation Frame: 1261996 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 82 - Activation Frame: 1276696 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 83 - Activation Frame: 1282576 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 84 - Activation Frame: 1288456 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 85 - Activation Frame: 1303156 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 86 - Activation Frame: 1317856 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 87 - Activation Frame: 1335496 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 88 - Activation Frame: 1338436 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 89 - Activation Frame: 1361956 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 90 - Activation Frame: 1367836 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 91 - Activation Frame: 1385476 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 92 - Activation Frame: 1408996 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 93 - Activation Frame: 1411936 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 94 - Activation Frame: 1423696 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 95 - Activation Frame: 1464856 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 96 - Activation Frame: 1491316 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 97 - Activation Frame: 1526596 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 98 - Activation Frame: 1538356 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 99 - Activation Frame: 1567756 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 100 - Activation Frame: 1582456 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 101 - Activation Frame: 1585396 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 102 - Activation Frame: 1588336 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 103 - Activation Frame: 1614796 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 104 - Activation Frame: 1635376 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 105 - Activation Frame: 1653016 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 106 - Activation Frame: 1658896 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 107 - Activation Frame: 1670656 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 108 - Activation Frame: 1676536 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 109 - Activation Frame: 1688296 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 110 - Activation Frame: 1711816 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 111 - Activation Frame: 1788256 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 112 - Activation Frame: 1814716 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 113 - Activation Frame: 1852936 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 114 - Activation Frame: 1879396 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 115 - Activation Frame: 1885276 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 116 - Activation Frame: 1891156 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 117 - Activation Frame: 1899976 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 118 - Activation Frame: 1908796 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 119 - Activation Frame: 1917616 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 120 - Activation Frame: 1923496 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 121 - Activation Frame: 1938196 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 122 - Activation Frame: 1947016 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 123 - Activation Frame: 1961716 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 124 - Activation Frame: 1970536 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 125 - Activation Frame: 1979356 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 126 - Activation Frame: 1996996 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 127 - Activation Frame: 2005816 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 128 - Activation Frame: 2008756 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 129 - Activation Frame: 2017576 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 130 - Activation Frame: 2038156 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 131 - Activation Frame: 2044036 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 132 - Activation Frame: 2046976 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 133 - Activation Frame: 2055796 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 134 - Activation Frame: 2067556 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 135 - Activation Frame: 2070496 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 136 - Activation Frame: 2076376 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 137 - Activation Frame: 2088136 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 138 - Activation Frame: 2094016 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 139 - Activation Frame: 2108716 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 140 - Activation Frame: 2114596 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 141 - Activation Frame: 2123416 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 142 - Activation Frame: 2138116 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 143 - Activation Frame: 2141056 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 144 - Activation Frame: 2149876 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 145 - Activation Frame: 2211616 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 146 - Activation Frame: 2223376 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 147 - Activation Frame: 2273356 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 148 - Activation Frame: 2285116 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 149 - Activation Frame: 2290996 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 150 - Activation Frame: 2323336 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 151 - Activation Frame: 2411536 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 152 - Activation Frame: 2437996 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 153 - Activation Frame: 2452696 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 154 - Activation Frame: 2493856 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 155 - Activation Frame: 2508556 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 156 - Activation Frame: 2523256 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 157 - Activation Frame: 2529136 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 158 - Activation Frame: 2552656 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 159 - Activation Frame: 2558536 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 160 - Activation Frame: 2561476 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 161 - Activation Frame: 2564416 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 162 - Activation Frame: 2596756 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 163 - Activation Frame: 2608516 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 164 - Activation Frame: 2611456 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 165 - Activation Frame: 2620276 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 166 - Activation Frame: 2623216 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 167 - Activation Frame: 2664376 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 168 - Activation Frame: 2670256 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 169 - Activation Frame: 2699656 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 170 - Activation Frame: 2708476 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 171 - Activation Frame: 2717296 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 172 - Activation Frame: 2731996 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 173 - Activation Frame: 2734936 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 174 - Activation Frame: 2749636 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 175 - Activation Frame: 2752576 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 176 - Activation Frame: 2764336 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 177 - Activation Frame: 2767276 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 178 - Activation Frame: 2787856 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 179 - Activation Frame: 2934856 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 180 - Activation Frame: 2964256 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 181 - Activation Frame: 2976016 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 182 - Activation Frame: 2981896 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 183 - Activation Frame: 2993656 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 184 - Activation Frame: 2996596 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 185 - Activation Frame: 3002476 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 186 - Activation Frame: 3017176 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 187 - Activation Frame: 3020116 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 188 - Activation Frame: 3031876 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 189 - Activation Frame: 3049516 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 190 - Activation Frame: 3073036 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 191 - Activation Frame: 3128896 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 192 - Activation Frame: 3143596 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 193 - Activation Frame: 3217096 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 194 - Activation Frame: 3228856 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 195 - Activation Frame: 3249436 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 196 - Activation Frame: 3255316 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 197 - Activation Frame: 3284716 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 198 - Activation Frame: 3296476 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 199 - Activation Frame: 3305296 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 200 - Activation Frame: 3317056 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 201 - Activation Frame: 3319996 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 202 - Activation Frame: 3322936 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 203 - Activation Frame: 3331756 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 204 - Activation Frame: 3361156 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 205 - Activation Frame: 3367036 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 206 - Activation Frame: 3375856 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 207 - Activation Frame: 3381736 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 208 - Activation Frame: 3393496 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 209 - Activation Frame: 3396436 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 210 - Activation Frame: 3402316 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 211 - Activation Frame: 3414076 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 212 - Activation Frame: 3417016 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 213 - Activation Frame: 3422896 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 214 - Activation Frame: 3428776 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 215 - Activation Frame: 3437596 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 216 - Activation Frame: 3446416 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 217 - Activation Frame: 3461116 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 218 - Activation Frame: 3469936 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 219 - Activation Frame: 3499336 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 220 - Activation Frame: 3505216 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 221 - Activation Frame: 3511096 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 222 - Activation Frame: 3522856 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 223 - Activation Frame: 3543436 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 224 - Activation Frame: 3549316 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 225 - Activation Frame: 3564016 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 226 - Activation Frame: 3566956 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 227 - Activation Frame: 3569896 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 228 - Activation Frame: 3605176 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 229 - Activation Frame: 3608116 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 230 - Activation Frame: 3619876 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 231 - Activation Frame: 3628696 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 232 - Activation Frame: 3634576 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 233 - Activation Frame: 3640456 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 234 - Activation Frame: 3643396 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 235 - Activation Frame: 3658096 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 236 - Activation Frame: 3663976 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 237 - Activation Frame: 3693376 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 238 - Activation Frame: 3702196 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 239 - Activation Frame: 3769816 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 240 - Activation Frame: 3928576 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 241 - Activation Frame: 3975616 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 242 - Activation Frame: 3984436 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 243 - Activation Frame: 4016776 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 244 - Activation Frame: 4034416 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 245 - Activation Frame: 4049116 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 246 - Activation Frame: 4057936 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 247 - Activation Frame: 4087336 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 248 - Activation Frame: 4093216 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 249 - Activation Frame: 4099096 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 250 - Activation Frame: 4107916 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 251 - Activation Frame: 4146136 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 252 - Activation Frame: 4181416 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 253 - Activation Frame: 4319596 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 254 - Activation Frame: 4328416 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 255 - Activation Frame: 4354876 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 256 - Activation Frame: 4419556 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 257 - Activation Frame: 4443076 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 258 - Activation Frame: 4481296 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 259 - Activation Frame: 4507756 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 260 - Activation Frame: 4560676 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 261 - Activation Frame: 4566556 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 262 - Activation Frame: 4610656 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 263 - Activation Frame: 4778236 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 264 - Activation Frame: 4872316 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 265 - Activation Frame: 4928176 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 266 - Activation Frame: 4939936 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 267 - Activation Frame: 4978156 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 268 - Activation Frame: 4989916 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 269 - Activation Frame: 5001676 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 270 - Activation Frame: 5039896 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 271 - Activation Frame: 5078116 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 272 - Activation Frame: 5101636 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 273 - Activation Frame: 5142796 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 274 - Activation Frame: 5151616 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 275 - Activation Frame: 5183956 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 276 - Activation Frame: 5198656 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 277 - Activation Frame: 5222176 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 278 - Activation Frame: 5239816 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 279 - Activation Frame: 5263336 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 280 - Activation Frame: 5272156 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 281 - Activation Frame: 5278036 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 282 - Activation Frame: 5280976 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 283 - Activation Frame: 5295676 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 284 - Activation Frame: 5304496 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 285 - Activation Frame: 5307436 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 286 - Activation Frame: 5310376 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 287 - Activation Frame: 5313316 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 288 - Activation Frame: 5325076 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 289 - Activation Frame: 5328016 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 290 - Activation Frame: 5336836 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 291 - Activation Frame: 5348596 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 292 - Activation Frame: 5357416 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 293 - Activation Frame: 5360356 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 294 - Activation Frame: 5363296 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 295 - Activation Frame: 5372116 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 296 - Activation Frame: 5389756 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 297 - Activation Frame: 5395636 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 298 - Activation Frame: 5401516 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 299 - Activation Frame: 5419156 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 300 - Activation Frame: 5433856 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 301 - Activation Frame: 5451496 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 302 - Activation Frame: 5454436 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 303 - Activation Frame: 5463256 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 304 - Activation Frame: 5486776 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 305 - Activation Frame: 5492656 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 306 - Activation Frame: 5542636 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 307 - Activation Frame: 5566156 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 308 - Activation Frame: 5569096 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 309 - Activation Frame: 5583796 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 310 - Activation Frame: 5604376 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 311 - Activation Frame: 5619076 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 312 - Activation Frame: 5642596 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 313 - Activation Frame: 5651416 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 314 - Activation Frame: 5663176 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 315 - Activation Frame: 5677876 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 316 - Activation Frame: 5686696 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 317 - Activation Frame: 5745496 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 318 - Activation Frame: 5771956 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 319 - Activation Frame: 5810176 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 320 - Activation Frame: 5827816 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 321 - Activation Frame: 5830756 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 322 - Activation Frame: 5845456 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 323 - Activation Frame: 5889556 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 324 - Activation Frame: 5927776 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 325 - Activation Frame: 5936596 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 326 - Activation Frame: 5942476 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 327 - Activation Frame: 5960116 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 328 - Activation Frame: 5974816 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 329 - Activation Frame: 5986576 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 330 - Activation Frame: 6001276 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 331 - Activation Frame: 6015976 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 332 - Activation Frame: 6024796 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 333 - Activation Frame: 6051256 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 334 - Activation Frame: 6057136 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 335 - Activation Frame: 6071836 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 336 - Activation Frame: 6080656 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 337 - Activation Frame: 6115936 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 338 - Activation Frame: 6121816 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 339 - Activation Frame: 6195316 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 340 - Activation Frame: 6210016 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 341 - Activation Frame: 6245296 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 342 - Activation Frame: 6283516 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 343 - Activation Frame: 6289396 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 344 - Activation Frame: 6292336 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 345 - Activation Frame: 6298216 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 346 - Activation Frame: 6301156 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 347 - Activation Frame: 6330556 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 348 - Activation Frame: 6339376 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 349 - Activation Frame: 6354076 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 350 - Activation Frame: 6383476 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 351 - Activation Frame: 6386416 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 352 - Activation Frame: 6421696 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 353 - Activation Frame: 6454036 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 354 - Activation Frame: 6465796 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 355 - Activation Frame: 6498136 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 356 - Activation Frame: 6536356 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 357 - Activation Frame: 6574576 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 358 - Activation Frame: 6583396 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 359 - Activation Frame: 6595156 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 360 - Activation Frame: 6598096 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 361 - Activation Frame: 6601036 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 362 - Activation Frame: 6606916 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 363 - Activation Frame: 6621616 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 364 - Activation Frame: 6624556 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 365 - Activation Frame: 6633376 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 366 - Activation Frame: 6639256 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 367 - Activation Frame: 6683356 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 368 - Activation Frame: 6686296 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 369 - Activation Frame: 6700996 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 370 - Activation Frame: 6709816 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 371 - Activation Frame: 6727456 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 372 - Activation Frame: 6742156 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 373 - Activation Frame: 6748036 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 374 - Activation Frame: 6753916 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 375 - Activation Frame: 6759796 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 376 - Activation Frame: 6762736 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 377 - Activation Frame: 6786256 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 378 - Activation Frame: 6803896 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 379 - Activation Frame: 6806836 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 380 - Activation Frame: 6815656 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 381 - Activation Frame: 6818596 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 382 - Activation Frame: 6824476 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 383 - Activation Frame: 6830356 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 384 - Activation Frame: 6833296 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 385 - Activation Frame: 6842116 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 386 - Activation Frame: 6850936 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 387 - Activation Frame: 6853876 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 388 - Activation Frame: 6862696 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 389 - Activation Frame: 6865636 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 390 - Activation Frame: 6871516 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 391 - Activation Frame: 6883276 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 392 - Activation Frame: 6886216 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 393 - Activation Frame: 6895036 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 394 - Activation Frame: 6900916 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 395 - Activation Frame: 6915616 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 396 - Activation Frame: 6927376 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 397 - Activation Frame: 6933256 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 398 - Activation Frame: 6962656 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 399 - Activation Frame: 6971476 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 400 - Activation Frame: 6977356 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 401 - Activation Frame: 6980296 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 402 - Activation Frame: 6994996 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 403 - Activation Frame: 7003816 
+{'Up' : 0, 'Down' : 1, 'Left' : 0, 'Right' : 0} 
+Note # 404 - Activation Frame: 7094956 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 405 - Activation Frame: 7118476 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 406 - Activation Frame: 7162576 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 407 - Activation Frame: 7165516 
+{'Up' : 1, 'Down' : 0, 'Left' : 0, 'Right' : 0} 
+Note # 408 - Activation Frame: 7194916 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 409 - Activation Frame: 7218436 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 410 - Activation Frame: 7230196 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 411 - Activation Frame: 7250776 
+{'Up' : 0, 'Down' : 0, 'Left' : 1, 'Right' : 0} 
+Note # 412 - Activation Frame: 7377196 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
+Note # 413 - Activation Frame: 7394836 
+{'Up' : 0, 'Down' : 0, 'Left' : 0, 'Right' : 1} 
