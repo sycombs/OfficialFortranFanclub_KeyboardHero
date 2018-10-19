@@ -18,19 +18,22 @@ def get_activation_frames(beatmap):
     af_arr = []
     for i in range(0, len(beatmap)-1, 2):
         frame = int(beatmap[i].split(": ")[1])
-        print(frame)
+        af_arr.append(frame)
+    return af_arr
 
-def generate_notelist(beatmap_arr):
+def generate_notelist(beatmap_arr, frames):
     note_list = []
+    act_time = frames[0]
     for i in range(len(beatmap_arr)):
+        act_time = frames[i]/44100
         if beatmap_arr[i]['Up']:
-            note_list.append([200, -200*i])
+            note_list.append([200, -200*act_time])
         elif beatmap_arr[i]['Down']:
-            note_list.append([400, -200*i])
+            note_list.append([400, -200*act_time])
         elif beatmap_arr[i]['Left']:
-            note_list.append([0, -200*i])
+            note_list.append([0, -200*act_time])
         else:
-            note_list.append([600, -200*i])
+            note_list.append([600, -200*act_time])
     return note_list
 
 def run_game():
@@ -43,7 +46,7 @@ def run_game():
     YELLOW = [255, 203, 73] # down
     ORANGE = [255, 77, 22] # right
 
-    note_height = 100
+    note_height = 50
     note_width = 200
 
     SIZE = [800, 600]
@@ -54,7 +57,7 @@ def run_game():
     beatmap = get_beatmap("output.txt")             #This has all information
     frames = get_activation_frames(beatmap)
     beatmap_seq = convert_beatmap(beatmap)          #This has up/down/left/right in sequential order
-    note_list = generate_notelist(beatmap_seq)      #This has coordinates for notes in sequential order
+    note_list = generate_notelist(beatmap_seq, frames)      #This has coordinates for notes in sequential order
 
     clock = pygame.time.Clock()
 
