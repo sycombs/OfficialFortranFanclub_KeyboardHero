@@ -45,7 +45,7 @@ class gui_button:
         if self.click_action is not None:
             if not self.clicked:
                 self.clicked = True
-                self.click_action()
+                return self.click_action()
 
     def place_self(self,window,x,y):
         self.x = x
