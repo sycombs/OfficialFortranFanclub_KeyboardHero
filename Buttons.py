@@ -52,7 +52,7 @@ class gui_button:
         self.y = y
         self.draw(window,self.outline)
 
-    def draw(self,window):
+    def draw(self,window, text_size = 40):
         '''
         @pre draw method with option for outline
         @post button with given parameters
@@ -66,7 +66,7 @@ class gui_button:
             pygame.draw.rect(window,self.color,(self.x,self.y,self.width,self.height))
 
         if self.text != "":
-            font = pygame.font.SysFont(None,40)
+            font = pygame.font.SysFont(None,text_size)
             text = font.render(self.text, 1, (0,0,0))
             window.blit(text, (self.x + (self.width/2 - text.get_width()/2), self.y + (self.height/2 - text.get_height()/2)))
 
