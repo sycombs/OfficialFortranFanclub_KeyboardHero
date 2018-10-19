@@ -47,7 +47,7 @@ class gui_menu:
         textRect.centerx ,textRect.centery = x, y
         surface.blit(textSurf, textRect)
 
-    def draw_menu(self,window):
+    def draw_menu(self,window,size=40):
         """
         @pre draw method with option for outline
         @post button with given parameters
@@ -56,7 +56,7 @@ class gui_menu:
         window.blit(self.surf, self.rect)
         self.surf.fill((255, 255, 255))
         if(self.text!=""):
-            self.create_text("Game Over", self.surf, self.width*.5, self.height*.25)
+            self.create_text("Game Over", self.surf, self.width*.5, self.height*.1)
 
         for items in self.buttonList:
-            items.draw(self.surf)
+            items.draw(self.surf, size)
