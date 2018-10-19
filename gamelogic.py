@@ -52,9 +52,6 @@ def run_game():
     note_list = generate_notelist(beatmap_seq)      #This has coordinates for notes in sequential order
 
     clock = pygame.time.Clock()
-    # pygame.time.set_timer(up_note, 0)
-    # x = 0
-    # y = 0
 
     done = False
     while not done:
@@ -63,26 +60,6 @@ def run_game():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 done = True
-            # elif event.type == up_note:
-            #     pygame.draw.rect(screen, BLUE, (x, y, 200, 200))
-            #     while y < 800:
-            #         y += 1
-            #         pygame.display.flip()
-            # elif event.type == down_note:
-            #     pygame.draw.rect(screen, YELLOW, (note_list[i][0], note_list[i][1], 200, 200))
-            #     while note_list[i][1] < 800:
-            #         note_list[i][1] += 1
-            #         pygame.display.flip()
-            # elif event.type == left_note:
-            #     pygame.draw.rect(screen, PINK, (note_list[i][0], note_list[i][1], 200, 200))
-            #     while note_list[i][1] < 800:
-            #         note_list[i][1] += 1
-            #         pygame.display.flip()
-            # else:
-            #     pygame.draw.rect(screen, ORANGE, (note_list[i][0], note_list[i][1], 200, 200))
-            #     while note_list[i][1] < 800:
-            #         note_list[i][1] += 1
-            #         pygame.display.flip()
 
         screen.fill(BLACK)
 
