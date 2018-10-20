@@ -1,0 +1,38 @@
+import System.IO
+import Data.WAVE
+import Data.List
+import Data.String
+
+import System.Posix.Temp
+
+import System.Process -- I took out parallel processing, put it back in
+import Control.Parallel
+
+-- TODO
+-- Proper output
+
+
+main = do
+   h <- openFile "song.wav" ReadMode
+   wav <- getWAVEFile "song.wav"
+   let samples = waveSamples wav
+
+   return samples
+
+--splitChan :: [[WAVESample]] -> [WAVESample]
+splitChan cs = [samp | samp <- map (\x -> head x) cs]
+
+-- Partition the song?
+--s' :: [WAVESample] -> [Integer]
+s' [] = []
+s' xs = [d'] ++ s' (drop 1470 xs)
+  where d' = (diff x - diff y) `div` 5000
+        p = take 1470 xs
+        x = take 735 p
+        y = drop 735 p
+
+--diff :: [Integer] -> Integer
+--diff [] = 0
+diff xs = foldl' (+) 0 xs
+
+listImp xs = map (\x -> x * 1470) (findIndices (> 350000) (map abs xs))
