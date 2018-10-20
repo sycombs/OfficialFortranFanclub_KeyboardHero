@@ -18,25 +18,42 @@ main = do
    wav <- getWAVEFile "song.wav"
    let samples = waveSamples wav
 
-   let imp = filter (>350000) (map abs (listImpulses samples))
-   return imp
+   let leftChan = lChan samples
+   --let imps = (s' leftChan)
+   return leftChan
+   --let imp = --filter (>350000) (map abs (listImpulses samples))
+   --let imp = listImpulses samples
+   --return imp
 
 
-listImpulses :: [[WAVESample]] -> [WAVESample]
 
-listImpulses [] = []
-listImpulses xs = [((h' - t') `div` 5000)] ++ (listImpulses (drop 1470 xs))
+lChan :: [[WAVESample]] -> [WAVESample]
+lChan cs = [l | l <- map (\x -> head x) cs]
+
+--rChan :: [a] -> a
+--rChan cs = [r | r <- map (\x -> last x) cs]
+
+--s' :: [WAVESample] -> [Integer]
+s' [] = []
+s' xs = [d'] ++ s' (drop 1470 xs)
+  where d' = diff x - diff y
+        x = take 735 xs
+        y = take 735 (drop 735 xs)
+--s' a = [sum (take 2 a)] ++ (s' (drop 2 a))
+
+--diff :: [Integer] -> Integer
+diff [] = 0
+diff xs = foldl' (+) 0 xs-- ++ (diff (drop 2 xs))
+  --where d' = (take 1 xs) - (take 1 (drop 1 xs))
+
+listImp xs = findIndices (> 350000) xs
+
+
+-- My list is all the differences along with where they happen
+--listFImp xs = [(f, d) | >
+
+
+--[d'] ++ (listImpulses (drop 1470 xs))
 --listImpulses xs = [((h' - t') `div` 5000), link] ++ (listImpulses (drop 1470 xs))
-   where h' = foldl' (+) 0 [h | h <- map (\a -> head a) (take 735 xs)]
-         t' = foldl' (+) 0 [t | t <- map (\b -> last b) (take 735 (drop 735 xs))]
-         --link = take 1 (drop 734 xs)
 
-o :: [WAVESample] -> IO ()
-o f = do
-   (n, h) <- mkstemp "ignore.txt"
-   mapM_ (hPutStrLn h) (o' f)
-   hClose h
-
-o' :: [WAVESample] -> [String]
-o' [] = []
-o' f = [show (take 1 f)] ++ (o' (drop 1 f))
+--listImpulses :: [[WAVESample]] -> [WAVESample]
