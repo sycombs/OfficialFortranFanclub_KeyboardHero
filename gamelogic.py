@@ -25,15 +25,17 @@ def generate_notelist(beatmap_arr, frames):
     note_list = []
     act_time = frames[0]
     for i in range(len(beatmap_arr)):
-        act_time = frames[i]/44100
+        act_time = frames[i]/44100              #second at which it should be activiated
+        act_time = act_time*300
+        print(act_time)
         if beatmap_arr[i]['Up']:
-            note_list.append([200, -200*act_time])
+            note_list.append([200, -act_time])
         elif beatmap_arr[i]['Down']:
-            note_list.append([400, -200*act_time])
+            note_list.append([400, -act_time])
         elif beatmap_arr[i]['Left']:
-            note_list.append([0, -200*act_time])
+            note_list.append([0, -act_time])
         else:
-            note_list.append([600, -200*act_time])
+            note_list.append([600, -act_time])
     return note_list
 
 def run_game():
@@ -49,7 +51,7 @@ def run_game():
     note_height = 50
     note_width = 200
 
-    SIZE = [800, 600]
+    SIZE = [800, 700]
 
     screen = pygame.display.set_mode(SIZE)
     pygame.display.set_caption("Keyboard Hero")
@@ -63,7 +65,6 @@ def run_game():
 
     done = False
     while not done:
-        i = 0;
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -82,10 +83,8 @@ def run_game():
                 pygame.draw.rect(screen, ORANGE, (note_list[i][0], note_list[i][1], note_width, note_height))
             note_list[i][1] += 5 #Increments on y
 
-        i += 1
-
         pygame.display.flip()
-        clock.tick(100)
+        clock.tick(60)
 
     pygame.quit()
 
