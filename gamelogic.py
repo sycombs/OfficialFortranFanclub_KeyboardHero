@@ -27,6 +27,7 @@ def generate_notelist(beatmap_arr, frames):
     for i in range(len(beatmap_arr)):
         act_time = frames[i]/44100              #second at which it should be activiated
         act_time = act_time*300
+        act_time = act_time + 600
         print(act_time)
         if beatmap_arr[i]['Up']:
             note_list.append([200, -act_time])
@@ -38,7 +39,7 @@ def generate_notelist(beatmap_arr, frames):
             note_list.append([600, -act_time])
     return note_list
 
-def run_game():
+def run_game(song):
     pygame.init()
 
     BLACK = [0, 0, 0] # background
@@ -51,7 +52,7 @@ def run_game():
     note_height = 50
     note_width = 200
 
-    SIZE = [800, 700]
+    SIZE = [800, 650]
 
     screen = pygame.display.set_mode(SIZE)
     pygame.display.set_caption("Keyboard Hero")
@@ -62,6 +63,8 @@ def run_game():
     note_list = generate_notelist(beatmap_seq, frames)      #This has coordinates for notes in sequential order
 
     clock = pygame.time.Clock()
+    pygame.mixer.music.load(song)
+    pygame.mixer.music.play(0)
 
     done = False
     while not done:
@@ -71,8 +74,9 @@ def run_game():
                 done = True
 
         screen.fill(BLACK)
+        pygame.draw.rect(screen, WHITE, (0, 600, note_width*4, note_height))
 
-        for i in range(len(note_list)):
+        for i in range(0, len(note_list), 5):
             if note_list[i][0] == 0:
                 pygame.draw.rect(screen, PINK, (note_list[i][0], note_list[i][1], note_width, note_height))
             elif note_list[i][0] == 200:
@@ -88,4 +92,4 @@ def run_game():
 
     pygame.quit()
 
-run_game()
+run_game("song.wav")
