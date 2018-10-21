@@ -25,7 +25,7 @@ def get_activation_frames(beatmap):
 def generate_notelist(beatmap_arr, frames, width, height):
     note_list = []
     act_time = frames[0]
-    for i in range(len(beatmap_arr)):
+    for i in range(0, len(beatmap_arr), 5):
         act_time = frames[i]/44100              #second at which it should be activiated
         act_time = act_time*300
         act_time = act_time + 600
@@ -95,6 +95,8 @@ def run_game(song):
             left_button.on_click()
             if left_button.rect.collidelist(note_list) != -1:
                 score += 1
+                index = left_button.rect.collidelist(note_list)
+                del note_list[index] #remove note from list
         else:
             left_button.mouse_over = False
             left_button.clicked = False
@@ -103,6 +105,8 @@ def run_game(song):
             up_button.on_click()
             if up_button.rect.collidelist(note_list) != -1:
                 score += 1
+                index = up_button.rect.collidelist(note_list)
+                del note_list[index]
         else:
             up_button.mouse_over = False
             up_button.clicked = False
@@ -111,6 +115,8 @@ def run_game(song):
             down_button.on_click()
             if down_button.rect.collidelist(note_list) != -1:
                 score += 1
+                index = down_button.rect.collidelist(note_list)
+                del note_list[index]
         else:
             down_button.mouse_over = False
             down_button.clicked = False
@@ -119,13 +125,15 @@ def run_game(song):
             right_button.on_click()
             if right_button.rect.collidelist(note_list) != -1:
                 score += 1
+                index = right_button.rect.collidelist(note_list)
+                del note_list[index]
         else:
             right_button.mouse_over = False
             right_button.clicked = False
         for button in button_list:
             button.draw(screen)
 
-        for i in range(0, len(note_list), 5):
+        for i in range(len(note_list)):
             if note_list[i][0] == 0:
                 pygame.draw.rect(screen, PINK, note_list[i])
             elif note_list[i][0] == 200:
