@@ -1,5 +1,6 @@
 import pygame
 import ast
+import Buttons
 
 def get_beatmap(file = "output.txt"):
     f = open(file, 'r')
@@ -21,21 +22,21 @@ def get_activation_frames(beatmap):
         af_arr.append(frame)
     return af_arr
 
-def generate_notelist(beatmap_arr, frames):
+def generate_notelist(beatmap_arr, frames, width, height):
     note_list = []
     act_time = frames[0]
-    for i in range(len(beatmap_arr)):
+    for i in range(0, len(beatmap_arr), 5):
         act_time = frames[i]/44100              #second at which it should be activiated
         act_time = act_time*300
         act_time = act_time + 600
         if beatmap_arr[i]['Up']:
-            note_list.append([200, -act_time])
+            note_list.append(pygame.Rect((200, -act_time), (width, height)))
         elif beatmap_arr[i]['Down']:
-            note_list.append([400, -act_time])
+            note_list.append(pygame.Rect((400, -act_time), (width, height)))
         elif beatmap_arr[i]['Left']:
-            note_list.append([0, -act_time])
+            note_list.append(pygame.Rect((0, -act_time), (width, height)))
         else:
-            note_list.append([600, -act_time])
+            note_list.append(pygame.Rect((600, -act_time), (width, height)))
     return note_list
 
 def run_game(song):
@@ -64,11 +65,20 @@ def run_game(song):
     beatmap = get_beatmap("output.txt")             #This has all information
     frames = get_activation_frames(beatmap)
     beatmap_seq = convert_beatmap(beatmap)          #This has up/down/left/right in sequential order
-    note_list = generate_notelist(beatmap_seq, frames)      #This has coordinates for notes in sequential order
+    note_list = generate_notelist(beatmap_seq, frames, note_width, note_height)      #List of note Rects in sequential order
 
     clock = pygame.time.Clock()
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(0)
+
+    left_button = Buttons.gui_button(BUTTON_PINK,0,600,note_width,note_height,'Left',True)
+    up_button = Buttons.gui_button(BUTTON_BLUE,200,600,note_width,note_height,'Up',True)
+    down_button = Buttons.gui_button(BUTTON_YELLOW,400,600,note_width,note_height,'Down',True)
+    right_button = Buttons.gui_button(BUTTON_ORANGE,600,600,note_width,note_height,'Right',True)
+    button_list = [left_button,up_button,down_button,right_button]
+
+
+    score = 0
 
     done = False
     while not done:
@@ -78,25 +88,67 @@ def run_game(song):
                 done = True
 
         screen.fill(BLACK)
-        pygame.draw.rect(screen, BUTTON_PINK, (0, 600, note_width, note_height))
-        pygame.draw.rect(screen, BUTTON_BLUE, (200, 600, note_width, note_height))
-        pygame.draw.rect(screen, BUTTON_YELLOW, (400, 600, note_width, note_height))
-        pygame.draw.rect(screen, BUTTON_ORANGE, (600, 600, note_width, note_height))
 
-        for i in range(0, len(note_list), 5):
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            left_button.mouse_over = True
+            left_button.on_click()
+            if left_button.rect.collidelist(note_list) != -1:
+                score += 1
+                index = left_button.rect.collidelist(note_list)
+                del note_list[index] #remove note from list
+        else:
+            left_button.mouse_over = False
+            left_button.clicked = False
+        if keys[pygame.K_UP]:
+            up_button.mouse_over = True
+            up_button.on_click()
+            if up_button.rect.collidelist(note_list) != -1:
+                score += 1
+                index = up_button.rect.collidelist(note_list)
+                del note_list[index]
+        else:
+            up_button.mouse_over = False
+            up_button.clicked = False
+        if keys[pygame.K_DOWN]:
+            down_button.mouse_over = True
+            down_button.on_click()
+            if down_button.rect.collidelist(note_list) != -1:
+                score += 1
+                index = down_button.rect.collidelist(note_list)
+                del note_list[index]
+        else:
+            down_button.mouse_over = False
+            down_button.clicked = False
+        if keys[pygame.K_RIGHT]:
+            right_button.mouse_over = True
+            right_button.on_click()
+            if right_button.rect.collidelist(note_list) != -1:
+                score += 1
+                index = right_button.rect.collidelist(note_list)
+                del note_list[index]
+        else:
+            right_button.mouse_over = False
+            right_button.clicked = False
+        for button in button_list:
+            button.draw(screen)
+
+        for i in range(len(note_list)):
             if note_list[i][0] == 0:
-                pygame.draw.rect(screen, PINK, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, PINK, note_list[i])
             elif note_list[i][0] == 200:
-                pygame.draw.rect(screen, BLUE, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, BLUE, note_list[i])
             elif note_list[i][0] == 400:
-                pygame.draw.rect(screen, YELLOW, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, YELLOW, note_list[i])
             else:
-                pygame.draw.rect(screen, ORANGE, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, ORANGE, note_list[i])
             note_list[i][1] += 5 #Increments on y
 
         pygame.display.flip()
         clock.tick(60)
 
     pygame.quit()
+
+    print(score)
 
 run_game("song.wav")
