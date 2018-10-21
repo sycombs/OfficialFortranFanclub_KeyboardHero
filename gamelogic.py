@@ -28,7 +28,6 @@ def generate_notelist(beatmap_arr, frames):
         act_time = frames[i]/44100              #second at which it should be activiated
         act_time = act_time*300
         act_time = act_time + 600
-        print(act_time)
         if beatmap_arr[i]['Up']:
             note_list.append([200, -act_time])
         elif beatmap_arr[i]['Down']:
@@ -48,6 +47,11 @@ def run_game(song):
     BLUE = [35, 174, 255] # up
     YELLOW = [255, 203, 73] # down
     ORANGE = [255, 77, 22] # right
+
+    BUTTON_PINK = [181, 61, 129]
+    BUTTON_BLUE = [14, 89, 132]
+    BUTTON_YELLOW = [196, 141, 1]
+    BUTTON_ORANGE = [135, 40, 12]
 
     note_height = 50
     note_width = 200
@@ -74,7 +78,10 @@ def run_game(song):
                 done = True
 
         screen.fill(BLACK)
-        pygame.draw.rect(screen, WHITE, (0, 600, note_width*4, note_height))
+        pygame.draw.rect(screen, BUTTON_PINK, (0, 600, note_width, note_height))
+        pygame.draw.rect(screen, BUTTON_BLUE, (200, 600, note_width, note_height))
+        pygame.draw.rect(screen, BUTTON_YELLOW, (400, 600, note_width, note_height))
+        pygame.draw.rect(screen, BUTTON_ORANGE, (600, 600, note_width, note_height))
 
         for i in range(0, len(note_list), 5):
             if note_list[i][0] == 0:
