@@ -86,40 +86,39 @@ def run_game(song):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 done = True
-            # for button in key_buttons:
-            #     if
 
         screen.fill(BLACK)
-        '''
-        for button in button_list:
-            button.draw(gameDisplay)
-        pygame.draw.rect(screen, BUTTON_PINK, (0, 600, note_width, note_height))
-        pygame.draw.rect(screen, BUTTON_BLUE, (200, 600, note_width, note_height))
-        pygame.draw.rect(screen, BUTTON_YELLOW, (400, 600, note_width, note_height))
-        pygame.draw.rect(screen, BUTTON_ORANGE, (600, 600, note_width, note_height))
-        '''
+
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             left_button.mouse_over = True
             left_button.on_click()
+            if left_button.rect.collidelist(note_list) != -1:
+                score += 1
         else:
             left_button.mouse_over = False
             left_button.clicked = False
         if keys[pygame.K_UP]:
             up_button.mouse_over = True
             up_button.on_click()
+            if up_button.rect.collidelist(note_list) != -1:
+                score += 1
         else:
             up_button.mouse_over = False
             up_button.clicked = False
         if keys[pygame.K_DOWN]:
             down_button.mouse_over = True
             down_button.on_click()
+            if down_button.rect.collidelist(note_list) != -1:
+                score += 1
         else:
             down_button.mouse_over = False
             down_button.clicked = False
         if keys[pygame.K_RIGHT]:
             right_button.mouse_over = True
             right_button.on_click()
+            if right_button.rect.collidelist(note_list) != -1:
+                score += 1
         else:
             right_button.mouse_over = False
             right_button.clicked = False
@@ -136,40 +135,6 @@ def run_game(song):
             else:
                 pygame.draw.rect(screen, ORANGE, note_list[i])
             note_list[i][1] += 5 #Increments on y
-
-        key = pygame.key.get_pressed()
-        if key[pygame.K_LEFT]:
-            left.mouse_over = True
-            left.on_click()
-            if left.rect.collidelist(note_list) != -1:
-                score += 1
-        else:
-            left.mouse_over = False
-            left.clicked = False
-        if key[pygame.K_UP]:
-            up.mouse_over = True
-            up.on_click()
-            if up.rect.collidelist(note_list) != -1:
-                score += 1
-        else:
-            up.mouse_over = False
-            up.clicked = False
-        if key[pygame.K_DOWN]:
-            down.mouse_over = True
-            down.on_click()
-            if down.rect.collidelist(note_list) != -1:
-                score += 1
-        else:
-            down.mouse_over = False
-            down.clicked = False
-        if key[pygame.K_RIGHT]:
-            right.mouse_over = True
-            right.on_click()
-            if right.rect.collidelist(note_list) != -1:
-                score += 1
-        else:
-            right.mouse_over = False
-            right.clicked = False
 
         pygame.display.flip()
         clock.tick(60)
