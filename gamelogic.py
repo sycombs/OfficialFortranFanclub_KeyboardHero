@@ -22,7 +22,7 @@ def get_activation_frames(beatmap):
         af_arr.append(frame)
     return af_arr
 
-def generate_notelist(beatmap_arr, frames):
+def generate_notelist(beatmap_arr, frames, width, height):
     note_list = []
     act_time = frames[0]
     for i in range(len(beatmap_arr)):
@@ -30,13 +30,13 @@ def generate_notelist(beatmap_arr, frames):
         act_time = act_time*300
         act_time = act_time + 600
         if beatmap_arr[i]['Up']:
-            note_list.append([200, -act_time])
+            note_list.append(pygame.Rect((200, -act_time), (width, height)))
         elif beatmap_arr[i]['Down']:
-            note_list.append([400, -act_time])
+            note_list.append(pygame.Rect((400, -act_time), (width, height)))
         elif beatmap_arr[i]['Left']:
-            note_list.append([0, -act_time])
+            note_list.append(pygame.Rect((0, -act_time), (width, height)))
         else:
-            note_list.append([600, -act_time])
+            note_list.append(pygame.Rect((600, -act_time), (width, height)))
     return note_list
 
 def run_game(song):
@@ -65,7 +65,7 @@ def run_game(song):
     beatmap = get_beatmap("output.txt")             #This has all information
     frames = get_activation_frames(beatmap)
     beatmap_seq = convert_beatmap(beatmap)          #This has up/down/left/right in sequential order
-    note_list = generate_notelist(beatmap_seq, frames)      #This has coordinates for notes in sequential order
+    note_list = generate_notelist(beatmap_seq, frames, note_width, note_height)      #List of note Rects in sequential order
 
     clock = pygame.time.Clock()
     pygame.mixer.music.load(song)
@@ -84,6 +84,8 @@ def run_game(song):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 done = True
+            # for button in key_buttons:
+            #     if
 
         screen.fill(BLACK)
         '''
@@ -124,13 +126,13 @@ def run_game(song):
 
         for i in range(0, len(note_list), 5):
             if note_list[i][0] == 0:
-                pygame.draw.rect(screen, PINK, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, PINK, note_list[i])
             elif note_list[i][0] == 200:
-                pygame.draw.rect(screen, BLUE, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, BLUE, note_list[i])
             elif note_list[i][0] == 400:
-                pygame.draw.rect(screen, YELLOW, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, YELLOW, note_list[i])
             else:
-                pygame.draw.rect(screen, ORANGE, (note_list[i][0], note_list[i][1], note_width, note_height))
+                pygame.draw.rect(screen, ORANGE, note_list[i])
             note_list[i][1] += 5 #Increments on y
 
         pygame.display.flip()
