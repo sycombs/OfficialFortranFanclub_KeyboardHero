@@ -36,7 +36,7 @@ pOut :: Int -> [(Int, WAVESample)] -> String
 pOut n [] = []
 pOut n (f:fs) = (line1 ++ line2) ++ (pOut (n + 1) fs)
    where line1 = "Note #" ++ (show n) ++ " - Activation Frame: " ++ show (fst f) ++ "\n"
-         line2 = "{'Up': '" ++ u ++ "', 'Down': '" ++ d ++ "', 'Left': '" ++ l ++ "', 'Right': '" ++ r ++ "'}\n"
+         line2 = "{'Up': " ++ u ++ ", 'Down': " ++ d ++ ", 'Left': " ++ l ++ ", 'Right': " ++ r ++ "}\n"
          u = if (x `mod` 2 == 0) then "1" else "0"
          d = if (x `mod` 2 == 1) then "1" else "0"
          l = if (400000 > x) then "1" else "0"
