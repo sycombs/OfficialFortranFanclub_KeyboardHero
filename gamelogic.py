@@ -3,12 +3,24 @@ import ast
 import Buttons
 
 def get_beatmap(file = "output.txt"):
+    """
+    @pre none
+    @param file: the beatmap file
+    @post gets beatmap out of file. Each note gets two indexes, 1) Note number and activation frame and 2) Directions
+    @return beatmap: a list of all notes in a beatmap
+    """
     f = open(file, 'r')
     if f.mode == 'r':
         beatmap = f.read().split('\n')
     return beatmap
 
 def convert_beatmap(beatmap):
+    """
+    @pre none
+    @param beatmap: a list of notes where each note has two indexes, 1) Nonte number & activation frame, 2) Directions
+    @post converts the beatmap to a dictionary of notes which contains their Directions
+    @return beatmap_arr: the converted beatmap
+    """
     beatmap_arr = []
     for i in range(1, len(beatmap), 2):
         current_note = ast.literal_eval(beatmap[i])
@@ -16,6 +28,12 @@ def convert_beatmap(beatmap):
     return beatmap_arr
 
 def get_activation_frames(beatmap):
+    """
+    @pre none
+    @param beatmap: a list of notes where each note has two indexes, 1) Nonte number & activation frame, 2) Directions
+    @post gets a list of activation frames
+    @return af_arr: list of activation frames
+    """
     af_arr = []
     for i in range(0, len(beatmap)-1, 2):
         frame = int(beatmap[i].split(": ")[1])
@@ -23,6 +41,15 @@ def get_activation_frames(beatmap):
     return af_arr
 
 def generate_notelist(beatmap_arr, frames, width, height):
+    """
+    @pre None
+    @param beatmap_arr: list of note dictionaries (w/ directions)
+    @param frames: list of activation frames
+    @param width: note width
+    @param height: note height
+    @post generates a list of pygame rects corresponding to each note
+    @return note_list: list of rects
+    """
     note_list = []
     act_time = frames[0]
     for i in range(0, len(beatmap_arr), 5):
@@ -40,6 +67,11 @@ def generate_notelist(beatmap_arr, frames, width, height):
     return note_list
 
 def run_game(song):
+    """
+    @pre none
+    @param song: wav file
+    @post runs song & beatmap - runs game
+    """
     pygame.init()
 
     BLACK = [0, 0, 0] # background
@@ -62,10 +94,10 @@ def run_game(song):
     screen = pygame.display.set_mode(SIZE)
     pygame.display.set_caption("Keyboard Hero")
 
-    beatmap = get_beatmap("output.txt")             #This has all information
+    beatmap = get_beatmap("output.txt")
     frames = get_activation_frames(beatmap)
-    beatmap_seq = convert_beatmap(beatmap)          #This has up/down/left/right in sequential order
-    note_list = generate_notelist(beatmap_seq, frames, note_width, note_height)      #List of note Rects in sequential order
+    beatmap_seq = convert_beatmap(beatmap)
+    note_list = generate_notelist(beatmap_seq, frames, note_width, note_height)
 
     clock = pygame.time.Clock()
     pygame.mixer.music.load(song)
