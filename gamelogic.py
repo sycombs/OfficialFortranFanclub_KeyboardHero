@@ -1,5 +1,6 @@
 import pygame
 import ast
+import Buttons
 
 def get_beatmap(file = "output.txt"):
     f = open(file, 'r')
@@ -70,6 +71,13 @@ def run_game(song):
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(0)
 
+    left_button = Buttons.gui_button(BUTTON_PINK,0,600,note_width,note_height,'Left',True)
+    up_button = Buttons.gui_button(BUTTON_BLUE,200,600,note_width,note_height,'Up',True)
+    down_button = Buttons.gui_button(BUTTON_YELLOW,400,600,note_width,note_height,'Down',True)
+    right_button = Buttons.gui_button(BUTTON_ORANGE,600,600,note_width,note_height,'Right',True)
+    button_list = [left_button,up_button,down_button,right_button]
+
+
     done = False
     while not done:
 
@@ -78,10 +86,41 @@ def run_game(song):
                 done = True
 
         screen.fill(BLACK)
+        '''
+        for button in button_list:
+            button.draw(gameDisplay)
         pygame.draw.rect(screen, BUTTON_PINK, (0, 600, note_width, note_height))
         pygame.draw.rect(screen, BUTTON_BLUE, (200, 600, note_width, note_height))
         pygame.draw.rect(screen, BUTTON_YELLOW, (400, 600, note_width, note_height))
         pygame.draw.rect(screen, BUTTON_ORANGE, (600, 600, note_width, note_height))
+        '''
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            left_button.mouse_over = True
+            left_button.on_click()
+        else:
+            left_button.mouse_over = False
+            left_button.clicked = False
+        if keys[pygame.K_UP]:
+            up_button.mouse_over = True
+            up_button.on_click()
+        else:
+            up_button.mouse_over = False
+            up_button.clicked = False
+        if keys[pygame.K_DOWN]:
+            down_button.mouse_over = True
+            down_button.on_click()
+        else:
+            down_button.mouse_over = False
+            down_button.clicked = False
+        if keys[pygame.K_RIGHT]:
+            right_button.mouse_over = True
+            right_button.on_click()
+        else:
+            right_button.mouse_over = False
+            right_button.clicked = False
+        for button in button_list:
+            button.draw(screen)
 
         for i in range(0, len(note_list), 5):
             if note_list[i][0] == 0:
