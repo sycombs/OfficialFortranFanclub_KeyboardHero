@@ -80,6 +80,8 @@ def run_game(song):
     key_buttons = [left, up, down, right]
     # keys = [K_LEFT, K_UP, K_DOWN, K_RIGHT]
 
+    score = 0
+
     done = False
     while not done:
 
@@ -105,9 +107,45 @@ def run_game(song):
                 pygame.draw.rect(screen, ORANGE, note_list[i])
             note_list[i][1] += 5 #Increments on y
 
+        key = pygame.key.get_pressed()
+        if key[pygame.K_LEFT]:
+            left.mouse_over = True
+            left.on_click()
+            if left.rect.collidelist(note_list) != -1:
+                score += 1
+        else:
+            left.mouse_over = False
+            left.clicked = False
+        if key[pygame.K_UP]:
+            up.mouse_over = True
+            up.on_click()
+            if up.rect.collidelist(note_list) != -1:
+                score += 1
+        else:
+            up.mouse_over = False
+            up.clicked = False
+        if key[pygame.K_DOWN]:
+            down.mouse_over = True
+            down.on_click()
+            if down.rect.collidelist(note_list) != -1:
+                score += 1
+        else:
+            down.mouse_over = False
+            down.clicked = False
+        if key[pygame.K_RIGHT]:
+            right.mouse_over = True
+            right.on_click()
+            if right.rect.collidelist(note_list) != -1:
+                score += 1
+        else:
+            right.mouse_over = False
+            right.clicked = False
+
         pygame.display.flip()
         clock.tick(60)
 
     pygame.quit()
+
+    print(score)
 
 run_game("song.wav")
