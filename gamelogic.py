@@ -1,3 +1,8 @@
+"""
+gamelogic.py
+All of the functions to convert beatmap and run a game
+"""
+
 import pygame
 import ast
 import Buttons
@@ -67,7 +72,7 @@ def generate_notelist(beatmap_arr, frames, width, height):
             note_list.append(pygame.Rect((600, -act_time), (width, height)))
     return note_list
 
-def run_game(song):
+def run_game(song = "song.wav"):
     """
     @pre none
     @param song: wav file
