@@ -1,3 +1,8 @@
+"""@package docstring
+   gameMenus.py creates and manages the menus when opening the game, and is in charge of passing information to the gamelogic.py.  Specific tasks include
+   operating the main menu, song selection menu, and mode menus, selecting of songs and difficulties, and starting the gameLogic with the selected parameters.
+"""
+
 import pygame as pyg
 import sys
 from Buttons import *
