@@ -1,3 +1,6 @@
+"""@package docstring
+Buttons.py contains the gui_button class, used in gameMenus, key_press and note classes
+used in gamelogic"""
 import pygame
 
 class gui_button:
