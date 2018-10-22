@@ -9,27 +9,39 @@ import Data.WAVE
 import Data.List
 import Data.Int
 
--- | Main aaaa
+-- | main makes all the necessary function calls to generate a beatmap using
+-- (currently) a single audio channel and when called with the proper commands
+-- via the console (listed below)
+--
+-- >>> ghc bm_gen.hs -e "main" > "outputfilename.txt"
+--
 main = do
    h <- openFile "song.wav" ReadMode
    wav <- getWAVEFile "song.wav"
    let lImps = (putStr . pOut 1) (impulse 1 $ splitList $ waveSamples wav)
    return lImps
 
--- | As used in bm_gen, we have the types WAVESamples -> [WAVESample]
-splitList ::
-          [[s]]  -- ^ Input: List of lists of type s
-          -> [s] -- ^ Return: The first element of each sublist
+-- | splitList
+-- Returns the first element in a list of lists
+--
+-- WAVESamples -> [WAVESample]
+--
+-- >>> splitList audioSamples
+--
+splitList :: [[s]] -> [s]
 splitList cs = [samp | samp <- map (\x -> head x) cs]
 
-{- |
-  Impulse
-  aaa
--}
-impulse ::
-        Int               -- ^ Input: Counts increments
-        -> [Int32]        -- ^ Input: The[Int32]
-        -> [(Int, Int32)] -- ^ [(Int, Int32)]
+-- |
+-- Returns a list 'impulses'
+--
+-- Two adjacent 735 subsamples are compared and if
+-- the difference between them passes an (currently arbitrarily chosen by me)
+-- threshold it adds the the frame in which it occurs and the magnitude of the
+-- difference
+--
+-- >>> impulse counter [DATA.WAVESample] -> [(Int, WAVESample)]
+--
+impulse :: Int -> [Int32] -> [(Int, Int32)]
 
 impulse f xs = if (d > 35000) then [(f * 1470 + 1, d)] ++ nImp
   else [] ++ nImp
@@ -38,11 +50,16 @@ impulse f xs = if (d > 35000) then [(f * 1470 + 1, d)] ++ nImp
         b = foldl' (+) 0 (take 735 $ drop 735 xs)
         nImp = impulse (f + 1) (drop 1470 xs)
 
--- | pOut
-pOut ::
-     Int                     -- ^ Int
-     -> [(Int, WAVESample)]  -- ^ (Int, WAVESample)
-     -> String               -- ^ String
+-- |
+-- Formats data in a such a way as to be useable by OFF Keyboard Hero's game_logic.py.
+-- Our current format is:
+--
+-- > Note #n - Activation Frame: f
+-- > {'Up': u, 'Down': d, 'Left': l, 'Right': r}
+--
+--
+
+pOut :: Int -> [(Int, WAVESample)] -> String
 
 pOut n [] = []
 pOut n (f:fs) = (line1 ++ line2) ++ pOut (n + 1) fs
