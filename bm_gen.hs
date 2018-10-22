@@ -19,7 +19,8 @@ main = do
    h <- openFile "song.wav" ReadMode
    wav <- getWAVEFile "song.wav"
    let lImps = (putStr . pOut 1) (impulse 1 $ splitList $ waveSamples wav)
-   return lImps
+   lImps
+   --return lImps
 
 -- | splitList
 -- Returns the first element in a list of lists
@@ -43,12 +44,14 @@ splitList cs = [samp | samp <- map (\x -> head x) cs]
 --
 impulse :: Int -> [Int32] -> [(Int, Int32)]
 
-impulse f xs = if (d > 35000) then [(f * 1470 + 1, d)] ++ nImp
+impulse f [] = []
+impulse f xs = if (d > t) then [(f * 1470 + 1, d)] ++ nImp
   else [] ++ nImp
   where d = (abs $ a - b) `div` 5000
         a = foldl' (+) 0 (take 735 xs)
         b = foldl' (+) 0 (take 735 $ drop 735 xs)
         nImp = impulse (f + 1) (drop 1470 xs)
+        t = 350000
 
 -- |
 -- Formats data in a such a way as to be useable by OFF Keyboard Hero's game_logic.py.
