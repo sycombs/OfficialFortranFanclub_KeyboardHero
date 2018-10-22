@@ -60,7 +60,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Buttons</b></li><li class="navelem"><a class="el" href="class_buttons_1_1gui__button.html">gui_button</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_buttons.html">Buttons</a></li><li class="navelem"><a class="el" href="class_buttons_1_1gui__button.html">gui_button</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -84,13 +84,11 @@ Inheritance diagram for Buttons.gui_button:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a19a6a546de225b8af10b9a652d9189b4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buttons_1_1gui__button.html#a19a6a546de225b8af10b9a652d9189b4">__init__</a> (self, color, x, y, width, height, text, outline=None, click_action=None)</td></tr>
 <tr class="separator:a19a6a546de225b8af10b9a652d9189b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fcf54a31377bb6934cbaa42aea23680"><td class="memItemLeft" align="right" valign="top"><a id="a3fcf54a31377bb6934cbaa42aea23680"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>get_rect</b> (self)</td></tr>
+<tr class="memitem:a3fcf54a31377bb6934cbaa42aea23680"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buttons_1_1gui__button.html#a3fcf54a31377bb6934cbaa42aea23680">get_rect</a> (self)</td></tr>
 <tr class="separator:a3fcf54a31377bb6934cbaa42aea23680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47a53d957f914949b6c21f6634255144"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buttons_1_1gui__button.html#a47a53d957f914949b6c21f6634255144">on_click</a> (self)</td></tr>
-<tr class="separator:a47a53d957f914949b6c21f6634255144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad30c394be0ddb6da81c6f4762236dc76"><td class="memItemLeft" align="right" valign="top"><a id="ad30c394be0ddb6da81c6f4762236dc76"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>place_self</b> (self, window, x, y)</td></tr>
+<tr class="memitem:a1357acc29df8d97220093c758647b0e2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buttons_1_1gui__button.html#a1357acc29df8d97220093c758647b0e2">on_click</a> (self, args)</td></tr>
+<tr class="separator:a1357acc29df8d97220093c758647b0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30c394be0ddb6da81c6f4762236dc76"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buttons_1_1gui__button.html#ad30c394be0ddb6da81c6f4762236dc76">place_self</a> (self, window, x, y)</td></tr>
 <tr class="separator:ad30c394be0ddb6da81c6f4762236dc76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afca47e7220d15d7296a7e8910fefe84e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buttons_1_1gui__button.html#afca47e7220d15d7296a7e8910fefe84e">draw</a> (self, window, text_size=40)</td></tr>
 <tr class="separator:afca47e7220d15d7296a7e8910fefe84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,8 +253,28 @@ Public Attributes</h2></td></tr>
 </pre> 
 </div>
 </div>
-<a id="a47a53d957f914949b6c21f6634255144"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47a53d957f914949b6c21f6634255144">&#9670;&nbsp;</a></span>on_click()</h2>
+<a id="a3fcf54a31377bb6934cbaa42aea23680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fcf54a31377bb6934cbaa42aea23680">&#9670;&nbsp;</a></span>get_rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Buttons.gui_button.get_rect </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@pre to return a button's Rect object
+@return pygame Rect object
+</pre> 
+</div>
+</div>
+<a id="a1357acc29df8d97220093c758647b0e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1357acc29df8d97220093c758647b0e2">&#9670;&nbsp;</a></span>on_click()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,14 +283,68 @@ Public Attributes</h2></td></tr>
           <td class="memname">def Buttons.gui_button.on_click </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">@pre called from main game loop to do associated action
 @post execute associated functions
 @return none
+</pre> 
+</div>
+</div>
+<a id="ad30c394be0ddb6da81c6f4762236dc76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30c394be0ddb6da81c6f4762236dc76">&#9670;&nbsp;</a></span>place_self()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Buttons.gui_button.place_self </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@brief to be used to change a button's x and y values &amp; redraw
+@param: window: Surface: Window to be displayed on
+@param: x: int: x position
+@param: y: int: y position
 </pre> 
 </div>
 </div>

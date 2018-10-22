@@ -1,0 +1,130 @@
+\hypertarget{namespacegame_menus}{}\section{game\+Menus Namespace Reference}
+\label{namespacegame_menus}\index{game\+Menus@{game\+Menus}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegame_menus_a4f85966223fa1b95eb213a36fc765b82}{main} ()
+\item 
+def \hyperlink{namespacegame_menus_a66dbbc5a74ad9c4a02f1661a10a69ad9}{quit\+\_\+game} ()
+\item 
+def \hyperlink{namespacegame_menus_af6914228389df9b4614e93c7c6836b67}{previous\+\_\+menu} ()
+\item 
+def \hyperlink{namespacegame_menus_af87fbd020405958cc021f902765a7e0d}{next\+\_\+menu} ()
+\item 
+def \hyperlink{namespacegame_menus_a6cce73d91a8b2e724b5907be9a6dad0a}{easy} ()
+\item 
+def \hyperlink{namespacegame_menus_a8ca037940ec4a6f5c27ca4e93d7b9356}{med} ()
+\item 
+def \hyperlink{namespacegame_menus_a94bf0bd58ca97e1ea8ddc80e376f7533}{hard} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacegame_menus_a11ef9beb0d7eff2ed4bb237e09882810}\label{namespacegame_menus_a11ef9beb0d7eff2ed4bb237e09882810}} 
+list {\bfseries menu\+Counter} = \mbox{[}0\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacegame_menus_a437ece1871ff002097bc5825c5f35ba9}\label{namespacegame_menus_a437ece1871ff002097bc5825c5f35ba9}} 
+tuple {\bfseries W\+H\+I\+TE} = (255,255,255)
+\item 
+\mbox{\Hypertarget{namespacegame_menus_a63c6d393e7926ac50fee896f0a0fe2e1}\label{namespacegame_menus_a63c6d393e7926ac50fee896f0a0fe2e1}} 
+tuple {\bfseries B\+L\+A\+CK} = (0,0,0)
+\item 
+\mbox{\Hypertarget{namespacegame_menus_abd649778f640f3d13ecac6c00e84f6cb}\label{namespacegame_menus_abd649778f640f3d13ecac6c00e84f6cb}} 
+tuple {\bfseries T\+U\+R\+Q\+U\+O\+I\+SE} = (0,245,255)
+\item 
+\mbox{\Hypertarget{namespacegame_menus_a12a163ccb40ab4980731077742bec4c5}\label{namespacegame_menus_a12a163ccb40ab4980731077742bec4c5}} 
+tuple {\bfseries G\+R\+EY} = (211,211,211)
+\item 
+\mbox{\Hypertarget{namespacegame_menus_af074ca0237d16dd092c9eb84ca758189}\label{namespacegame_menus_af074ca0237d16dd092c9eb84ca758189}} 
+{\bfseries main\+Menu} = \hyperlink{class_menu_1_1gui__menu}{gui\+\_\+menu}(W\+H\+I\+TE, 0, 0, 800, 600, \char`\"{}Keyboard Hero!!!!\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacegame_menus_abfd4e200d341aba89c738b2da78fe04a}\label{namespacegame_menus_abfd4e200d341aba89c738b2da78fe04a}} 
+{\bfseries song\+Menu} = \hyperlink{class_menu_1_1gui__menu}{gui\+\_\+menu}(W\+H\+I\+TE, 0, 0, 800, 800, \char`\"{}Select A Song!\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacegame_menus_a00d1a48bad9811a1042b89f061b7588a}\label{namespacegame_menus_a00d1a48bad9811a1042b89f061b7588a}} 
+{\bfseries mode\+Menu} = \hyperlink{class_menu_1_1gui__menu}{gui\+\_\+menu}(W\+H\+I\+TE, 0, 0, 800, 800, \char`\"{}Choose a Difficulty\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacegame_menus_abe492014847d1ea98eca11626c878c72}\label{namespacegame_menus_abe492014847d1ea98eca11626c878c72}} 
+list {\bfseries menu\+List} = \mbox{[}main\+Menu, song\+Menu, mode\+Menu\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package docstring
+   gameMenus.py creates and manages the menus when opening the game, and is in charge of passing information to the gamelogic.py.  Specific tasks include
+   operating the main menu, song selection menu, and mode menus, selecting of songs and difficulties, and starting the gameLogic with the selected parameters.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacegame_menus_a6cce73d91a8b2e724b5907be9a6dad0a}\label{namespacegame_menus_a6cce73d91a8b2e724b5907be9a6dad0a}} 
+\index{game\+Menus@{game\+Menus}!easy@{easy}}
+\index{easy@{easy}!game\+Menus@{game\+Menus}}
+\subsubsection{\texorpdfstring{easy()}{easy()}}
+{\footnotesize\ttfamily def game\+Menus.\+easy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param none
+@post calls the run_game function
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegame_menus_a94bf0bd58ca97e1ea8ddc80e376f7533}\label{namespacegame_menus_a94bf0bd58ca97e1ea8ddc80e376f7533}} 
+\index{game\+Menus@{game\+Menus}!hard@{hard}}
+\index{hard@{hard}!game\+Menus@{game\+Menus}}
+\subsubsection{\texorpdfstring{hard()}{hard()}}
+{\footnotesize\ttfamily def game\+Menus.\+hard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param none
+@post prints comming soon
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegame_menus_a4f85966223fa1b95eb213a36fc765b82}\label{namespacegame_menus_a4f85966223fa1b95eb213a36fc765b82}} 
+\index{game\+Menus@{game\+Menus}!main@{main}}
+\index{main@{main}!game\+Menus@{game\+Menus}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def game\+Menus.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param none
+@post Handles the creation and navigation of menus for the game
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegame_menus_a8ca037940ec4a6f5c27ca4e93d7b9356}\label{namespacegame_menus_a8ca037940ec4a6f5c27ca4e93d7b9356}} 
+\index{game\+Menus@{game\+Menus}!med@{med}}
+\index{med@{med}!game\+Menus@{game\+Menus}}
+\subsubsection{\texorpdfstring{med()}{med()}}
+{\footnotesize\ttfamily def game\+Menus.\+med (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param none
+@post prints comming soon
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegame_menus_af87fbd020405958cc021f902765a7e0d}\label{namespacegame_menus_af87fbd020405958cc021f902765a7e0d}} 
+\index{game\+Menus@{game\+Menus}!next\+\_\+menu@{next\+\_\+menu}}
+\index{next\+\_\+menu@{next\+\_\+menu}!game\+Menus@{game\+Menus}}
+\subsubsection{\texorpdfstring{next\+\_\+menu()}{next\_menu()}}
+{\footnotesize\ttfamily def game\+Menus.\+next\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param none
+@post increments the menu by one
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegame_menus_af6914228389df9b4614e93c7c6836b67}\label{namespacegame_menus_af6914228389df9b4614e93c7c6836b67}} 
+\index{game\+Menus@{game\+Menus}!previous\+\_\+menu@{previous\+\_\+menu}}
+\index{previous\+\_\+menu@{previous\+\_\+menu}!game\+Menus@{game\+Menus}}
+\subsubsection{\texorpdfstring{previous\+\_\+menu()}{previous\_menu()}}
+{\footnotesize\ttfamily def game\+Menus.\+previous\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param none
+@post decriments the menu by one
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegame_menus_a66dbbc5a74ad9c4a02f1661a10a69ad9}\label{namespacegame_menus_a66dbbc5a74ad9c4a02f1661a10a69ad9}} 
+\index{game\+Menus@{game\+Menus}!quit\+\_\+game@{quit\+\_\+game}}
+\index{quit\+\_\+game@{quit\+\_\+game}!game\+Menus@{game\+Menus}}
+\subsubsection{\texorpdfstring{quit\+\_\+game()}{quit\_game()}}
+{\footnotesize\ttfamily def game\+Menus.\+quit\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param none
+@post ends the pygame and quits to terminal
+\end{DoxyVerb}
+ 

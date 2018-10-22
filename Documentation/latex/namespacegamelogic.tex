@@ -1,0 +1,82 @@
+\hypertarget{namespacegamelogic}{}\section{gamelogic Namespace Reference}
+\label{namespacegamelogic}\index{gamelogic@{gamelogic}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegamelogic_a6a186cca17da365aaedb4e791cdd9989}{get\+\_\+beatmap} (file=\char`\"{}output.\+txt\char`\"{})
+\item 
+def \hyperlink{namespacegamelogic_ae2132679a5167f57810697fbc7b9ad3d}{convert\+\_\+beatmap} (beatmap)
+\item 
+def \hyperlink{namespacegamelogic_a9b9c9fd58c8093e039985584ad7c661b}{get\+\_\+activation\+\_\+frames} (beatmap)
+\item 
+def \hyperlink{namespacegamelogic_a08f1091c44c6dc43a56a34aec202e888}{generate\+\_\+notelist} (beatmap\+\_\+arr, frames, width, height)
+\item 
+def \hyperlink{namespacegamelogic_af89bec3eb64303877585a65db089f86d}{run\+\_\+game} (song=\char`\"{}song.\+wav\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}gamelogic.py
+All of the functions to convert beatmap and run a game
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacegamelogic_ae2132679a5167f57810697fbc7b9ad3d}\label{namespacegamelogic_ae2132679a5167f57810697fbc7b9ad3d}} 
+\index{gamelogic@{gamelogic}!convert\+\_\+beatmap@{convert\+\_\+beatmap}}
+\index{convert\+\_\+beatmap@{convert\+\_\+beatmap}!gamelogic@{gamelogic}}
+\subsubsection{\texorpdfstring{convert\+\_\+beatmap()}{convert\_beatmap()}}
+{\footnotesize\ttfamily def gamelogic.\+convert\+\_\+beatmap (\begin{DoxyParamCaption}\item[{}]{beatmap }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param beatmap: a list of notes where each note has two indexes, 1) Nonte number & activation frame, 2) Directions
+@post converts the beatmap to a dictionary of notes which contains their Directions
+@return beatmap_arr: the converted beatmap
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegamelogic_a08f1091c44c6dc43a56a34aec202e888}\label{namespacegamelogic_a08f1091c44c6dc43a56a34aec202e888}} 
+\index{gamelogic@{gamelogic}!generate\+\_\+notelist@{generate\+\_\+notelist}}
+\index{generate\+\_\+notelist@{generate\+\_\+notelist}!gamelogic@{gamelogic}}
+\subsubsection{\texorpdfstring{generate\+\_\+notelist()}{generate\_notelist()}}
+{\footnotesize\ttfamily def gamelogic.\+generate\+\_\+notelist (\begin{DoxyParamCaption}\item[{}]{beatmap\+\_\+arr,  }\item[{}]{frames,  }\item[{}]{width,  }\item[{}]{height }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre None
+@param beatmap_arr: list of note dictionaries (w/ directions)
+@param frames: list of activation frames
+@param width: note width
+@param height: note height
+@post generates a list of pygame rects corresponding to each note
+@return note_list: list of rects
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegamelogic_a9b9c9fd58c8093e039985584ad7c661b}\label{namespacegamelogic_a9b9c9fd58c8093e039985584ad7c661b}} 
+\index{gamelogic@{gamelogic}!get\+\_\+activation\+\_\+frames@{get\+\_\+activation\+\_\+frames}}
+\index{get\+\_\+activation\+\_\+frames@{get\+\_\+activation\+\_\+frames}!gamelogic@{gamelogic}}
+\subsubsection{\texorpdfstring{get\+\_\+activation\+\_\+frames()}{get\_activation\_frames()}}
+{\footnotesize\ttfamily def gamelogic.\+get\+\_\+activation\+\_\+frames (\begin{DoxyParamCaption}\item[{}]{beatmap }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param beatmap: a list of notes where each note has two indexes, 1) Nonte number & activation frame, 2) Directions
+@post gets a list of activation frames
+@return af_arr: list of activation frames
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegamelogic_a6a186cca17da365aaedb4e791cdd9989}\label{namespacegamelogic_a6a186cca17da365aaedb4e791cdd9989}} 
+\index{gamelogic@{gamelogic}!get\+\_\+beatmap@{get\+\_\+beatmap}}
+\index{get\+\_\+beatmap@{get\+\_\+beatmap}!gamelogic@{gamelogic}}
+\subsubsection{\texorpdfstring{get\+\_\+beatmap()}{get\_beatmap()}}
+{\footnotesize\ttfamily def gamelogic.\+get\+\_\+beatmap (\begin{DoxyParamCaption}\item[{}]{file = {\ttfamily \char`\"{}output.txt\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param file: the beatmap file
+@post gets beatmap out of file. Each note gets two indexes, 1) Note number and activation frame and 2) Directions
+@return beatmap: a list of all notes in a beatmap
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegamelogic_af89bec3eb64303877585a65db089f86d}\label{namespacegamelogic_af89bec3eb64303877585a65db089f86d}} 
+\index{gamelogic@{gamelogic}!run\+\_\+game@{run\+\_\+game}}
+\index{run\+\_\+game@{run\+\_\+game}!gamelogic@{gamelogic}}
+\subsubsection{\texorpdfstring{run\+\_\+game()}{run\_game()}}
+{\footnotesize\ttfamily def gamelogic.\+run\+\_\+game (\begin{DoxyParamCaption}\item[{}]{song = {\ttfamily \char`\"{}song.wav\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre none
+@param song: wav file
+@post runs song & beatmap - runs game
+\end{DoxyVerb}
+ 

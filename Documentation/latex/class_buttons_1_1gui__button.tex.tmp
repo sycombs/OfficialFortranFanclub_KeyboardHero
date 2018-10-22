@@ -9,13 +9,11 @@ Inheritance diagram for Buttons.\+gui\+\_\+button\+:
 \item 
 def \hyperlink{class_buttons_1_1gui__button_a19a6a546de225b8af10b9a652d9189b4}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, color, x, y, width, height, text, outline=None, click\+\_\+action=None)
 \item 
-\mbox{\Hypertarget{class_buttons_1_1gui__button_a3fcf54a31377bb6934cbaa42aea23680}\label{class_buttons_1_1gui__button_a3fcf54a31377bb6934cbaa42aea23680}} 
-def {\bfseries get\+\_\+rect} (self)
+def \hyperlink{class_buttons_1_1gui__button_a3fcf54a31377bb6934cbaa42aea23680}{get\+\_\+rect} (self)
 \item 
-def \hyperlink{class_buttons_1_1gui__button_a47a53d957f914949b6c21f6634255144}{on\+\_\+click} (self)
+def \hyperlink{class_buttons_1_1gui__button_a1357acc29df8d97220093c758647b0e2}{on\+\_\+click} (self, args)
 \item 
-\mbox{\Hypertarget{class_buttons_1_1gui__button_ad30c394be0ddb6da81c6f4762236dc76}\label{class_buttons_1_1gui__button_ad30c394be0ddb6da81c6f4762236dc76}} 
-def {\bfseries place\+\_\+self} (self, window, x, y)
+def \hyperlink{class_buttons_1_1gui__button_ad30c394be0ddb6da81c6f4762236dc76}{place\+\_\+self} (self, window, x, y)
 \item 
 def \hyperlink{class_buttons_1_1gui__button_afca47e7220d15d7296a7e8910fefe84e}{draw} (self, window, text\+\_\+size=40)
 \end{DoxyCompactItemize}
@@ -96,15 +94,35 @@ def \hyperlink{class_buttons_1_1gui__button_afca47e7220d15d7296a7e8910fefe84e}{d
 @post button with given parameters
 @return none
 \end{DoxyVerb}
- \mbox{\Hypertarget{class_buttons_1_1gui__button_a47a53d957f914949b6c21f6634255144}\label{class_buttons_1_1gui__button_a47a53d957f914949b6c21f6634255144}} 
+ \mbox{\Hypertarget{class_buttons_1_1gui__button_a3fcf54a31377bb6934cbaa42aea23680}\label{class_buttons_1_1gui__button_a3fcf54a31377bb6934cbaa42aea23680}} 
+\index{Buttons\+::gui\+\_\+button@{Buttons\+::gui\+\_\+button}!get\+\_\+rect@{get\+\_\+rect}}
+\index{get\+\_\+rect@{get\+\_\+rect}!Buttons\+::gui\+\_\+button@{Buttons\+::gui\+\_\+button}}
+\subsubsection{\texorpdfstring{get\+\_\+rect()}{get\_rect()}}
+{\footnotesize\ttfamily def Buttons.\+gui\+\_\+button.\+get\+\_\+rect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre to return a button's Rect object
+@return pygame Rect object
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_buttons_1_1gui__button_a1357acc29df8d97220093c758647b0e2}\label{class_buttons_1_1gui__button_a1357acc29df8d97220093c758647b0e2}} 
 \index{Buttons\+::gui\+\_\+button@{Buttons\+::gui\+\_\+button}!on\+\_\+click@{on\+\_\+click}}
 \index{on\+\_\+click@{on\+\_\+click}!Buttons\+::gui\+\_\+button@{Buttons\+::gui\+\_\+button}}
 \subsubsection{\texorpdfstring{on\+\_\+click()}{on\_click()}}
-{\footnotesize\ttfamily def Buttons.\+gui\+\_\+button.\+on\+\_\+click (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def Buttons.\+gui\+\_\+button.\+on\+\_\+click (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{args }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}@pre called from main game loop to do associated action
 @post execute associated functions
 @return none
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_buttons_1_1gui__button_ad30c394be0ddb6da81c6f4762236dc76}\label{class_buttons_1_1gui__button_ad30c394be0ddb6da81c6f4762236dc76}} 
+\index{Buttons\+::gui\+\_\+button@{Buttons\+::gui\+\_\+button}!place\+\_\+self@{place\+\_\+self}}
+\index{place\+\_\+self@{place\+\_\+self}!Buttons\+::gui\+\_\+button@{Buttons\+::gui\+\_\+button}}
+\subsubsection{\texorpdfstring{place\+\_\+self()}{place\_self()}}
+{\footnotesize\ttfamily def Buttons.\+gui\+\_\+button.\+place\+\_\+self (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{window,  }\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief to be used to change a button's x and y values & redraw
+@param: window: Surface: Window to be displayed on
+@param: x: int: x position
+@param: y: int: y position
 \end{DoxyVerb}
  
 
