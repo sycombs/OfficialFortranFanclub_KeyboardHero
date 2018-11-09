@@ -73,7 +73,7 @@ class gamelogic:
                 note_list.append(pygame.Rect((600, -act_time), (width, height)))
         return note_list
 
-    def run_game(self, song = "song.wav"):
+    def run_game(self, song = "song.wav", beatmap_file = "output.txt", mode = 1, difficulty = 1):
         """
         @pre none
         @param song: wav file
@@ -101,7 +101,7 @@ class gamelogic:
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("Keyboard Hero")
 
-        beatmap = self.get_beatmap("output.txt")
+        beatmap = self.get_beatmap(beatmap_file)
         frames = self.get_activation_frames(beatmap)
         beatmap_seq = self.convert_beatmap(beatmap)
         note_list = self.generate_notelist(beatmap_seq, frames, note_width, note_height)
