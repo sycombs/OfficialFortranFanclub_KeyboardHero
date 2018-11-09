@@ -80,6 +80,8 @@ def run_game(song = "song.wav"):
     """
     pygame.init()
 
+    # TODO: Stick all these constants in an array smh
+
     BLACK = [0, 0, 0] # background
     WHITE = [255, 255, 255]
     PINK = [255, 145, 207] # left
