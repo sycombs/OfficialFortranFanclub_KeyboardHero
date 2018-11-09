@@ -108,8 +108,8 @@ def run_game(song = "song.wav"):
     note_list = generate_notelist(beatmap_seq, frames, note_width, note_height)
 
     clock = pygame.time.Clock()
-    pygame.mixer.music.load(song)
-    pygame.mixer.music.play(0)
+    #pygame.mixer.music.load(song)
+    #pygame.mixer.music.play(0)
 
     left_button = Buttons.gui_button(BUTTON_PINK,0,600,note_width,note_height,'Left',True)
     up_button = Buttons.gui_button(BUTTON_BLUE,200,600,note_width,note_height,'Up',True)
@@ -126,8 +126,6 @@ def run_game(song = "song.wav"):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 done = True
-                pygame.quit()
-                sys.exit()
 
         screen.fill(BLACK)
 

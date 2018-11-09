@@ -1,3 +1,7 @@
+"""@package docstring
+   Menu.py has all functions to create a menu, specifically storing all buttons that will be used in the menu, the place of the menu, and the size of the menu.
+   Also is in charge of the drawing of the menu onto given surfaces.
+"""
 import pygame as pyg
 from Buttons import *
 
