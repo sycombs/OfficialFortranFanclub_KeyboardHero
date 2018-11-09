@@ -37,13 +37,9 @@ class gui_button:
         self.mouse_over = False
 
     def get_rect(self):
-        '''
-        @pre to return a button's Rect object
-        @return pygame Rect object
-        '''
         return self.rect
 
-    def on_click(self, *args):
+    def on_click(self):
         '''
         @pre called from main game loop to do associated action
         @post execute associated functions
@@ -52,15 +48,9 @@ class gui_button:
         if self.click_action is not None:
             if not self.clicked:
                 self.clicked = True
-                return self.click_action(*args)
+                return self.click_action()
 
     def place_self(self,window,x,y):
-        '''
-        @brief to be used to change a button's x and y values & redraw
-        @param: window: Surface: Window to be displayed on
-        @param: x: int: x position
-        @param: y: int: y position
-        '''
         self.x = x
         self.y = y
         self.draw(window,self.outline)

@@ -6,7 +6,6 @@ All of the functions to convert beatmap and run a game
 import pygame
 import ast
 import Buttons
-import sys
 
 def get_beatmap(file = "output.txt"):
     """
@@ -124,8 +123,6 @@ def run_game(song = "song.wav"):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 done = True
-                pygame.quit()
-                sys.exit()
 
         screen.fill(BLACK)
 
@@ -191,4 +188,4 @@ def run_game(song = "song.wav"):
 
     print(score)
 
-#run_game("song.wav")
+run_game("song.wav")
