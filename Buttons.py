@@ -125,3 +125,8 @@ class circle_button:
     def place_self(self, window, x, y):
         self.pos = (x,y)
         self.draw(window)
+
+    def is_clicked(self, mouse_x, mouse_y):
+        if mouse_x in range(self.pos[0] - self.radius, self.pos[0] + self.radius) and mouse_y in range(self.pos[1] - self.radius, self.pos[1] + self.radius):
+            return True
+        return False
