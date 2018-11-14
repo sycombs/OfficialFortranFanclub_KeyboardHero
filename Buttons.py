@@ -57,7 +57,7 @@ class gui_button:
 
     def draw(self,window, text_size = 40):
         '''
-        @pre draw method with option for outline
+        @pre draw method
         @post button with given parameters
         @return none
         '''
@@ -82,3 +82,46 @@ class key_button(gui_button):
         super().__init__(self, color, x, y, width, height, text)
 
     #TODO: implement draw function which draws picture at location instead of text
+
+class circle_button:
+    '''
+    @brief class for osu circle button.
+    '''
+    def __init__(self, x, y, radius, color, text = None, click_action = None):
+        '''
+        @param x: int: x location of CENTER of circle
+        @param y: int: y location of CENTER of circle
+        @param radius: int: radius of circle
+        @param text: string: text to be drawn to middle of circle, default to none
+        @param click_action: function: function to be called when button is clicked, default none
+        '''
+        self.pos = (x,y)
+        self.radius = radius
+        self.color = color
+        self.text = text
+        self.click_action = click_action
+        self.clicked = False
+        self.mouse_over = False
+        #self.rect = None
+        self.outline = None
+
+    def draw(self, window, outline = None, text_size = 40):
+        '''
+        @pre draw method
+        @post circle drawn
+        @return the circle's rect object
+        '''
+        self.outline = outline
+        '''
+        if self.text != "":
+            font = pygame.font.SysFont(None, text_size)
+            text = font.render(self.text, 1, (0,0,0))
+            window.blit(text, self.pos[0] - (text.get_width()/2), self.pos[1] - (text.get_height()/2) )
+        '''
+        pygame.draw.circle(window, self.color, self.pos, self.radius)
+        if self.outline:
+            pygame.draw.circle(window, (0,0,0), self.pos, self.radius + 2, 3)
+
+    def place_self(self, window, x, y):
+        self.pos = (x,y)
+        self.draw(window)
