@@ -78,10 +78,29 @@ class key_button(gui_button):
     @brief class to represent the key press buttons (left, up, down, right)
     @brief only overrides draw function when text is left,up,down,right
     '''
-    def __init__(self, color, x, y, width, height, text):
-        super().__init__(self, color, x, y, width, height, text)
+    def __init__(self, color, x, y, width, height, text, outline = None,click_action = None):
+        #super accesses constructor of parent class
+        super().__init__(color, x, y, width, height, text, outline, click_action)
+        self.hitbox = self._create_hitbox()
 
+    def _create_hitbox(self):
+        '''
+        @brief function to create hitbox rects
+        @return [rect]: list of hitbox rects
+        '''
+        hitbox_height = self.height // 3
+        return [pygame.rect.Rect(self.x,self.y,self.width, hitbox_height), pygame.rect.Rect(self.x,self.y + hitbox_height ,self.width, hitbox_height), pygame.rect.Rect(self.x,self.y + (2 * hitbox_height) ,self.width, hitbox_height)]
+    #def draw(self, window):
     #TODO: implement draw function which draws picture at location instead of text
+
+    def check_hitbox(self, rect_other):
+        '''
+        @pre this function is used to check how many of the hitbox rects another
+        @       rect has collided with. i.e. use to score
+        @param rect_other: rect: rect to be checked for collision
+        @return int: number of collisions
+        '''
+        return len(rect_other.collidelistall(self.hitbox))
 
 class circle_button:
     '''
@@ -102,7 +121,6 @@ class circle_button:
         self.click_action = click_action
         self.clicked = False
         self.mouse_over = False
-        #self.rect = None
         self.outline = None
 
     def draw(self, window, outline = None, text_size = 40):
