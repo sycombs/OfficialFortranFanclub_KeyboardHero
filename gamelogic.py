@@ -59,10 +59,10 @@ class gamelogic:
         """
         note_list = []
         act_time = frames[0]
-        for i in range(0, len(beatmap_arr), 5):
+        for i in range(len(beatmap_arr)):
             act_time = frames[i]/44100              #second at which it should be activiated
             act_time = act_time*300
-            act_time = act_time + 600
+            act_time = act_time + 550
             if beatmap_arr[i]['Up']:
                 note_list.append(pygame.Rect((200, -act_time), (width, height)))
             elif beatmap_arr[i]['Down']:
@@ -174,14 +174,17 @@ class gamelogic:
                 button.draw(screen)
 
             for i in range(len(note_list)):
-                if note_list[i][0] == 0:
-                    pygame.draw.rect(screen, PINK, note_list[i])
-                elif note_list[i][0] == 200:
-                    pygame.draw.rect(screen, BLUE, note_list[i])
-                elif note_list[i][0] == 400:
-                    pygame.draw.rect(screen, YELLOW, note_list[i])
+                if note_list[i][1] >= 600:
+                    pygame.draw.rect(screen, WHITE, note_list[i])
                 else:
-                    pygame.draw.rect(screen, ORANGE, note_list[i])
+                    if note_list[i][0] == 0:
+                        pygame.draw.rect(screen, PINK, note_list[i])
+                    elif note_list[i][0] == 200:
+                        pygame.draw.rect(screen, BLUE, note_list[i])
+                    elif note_list[i][0] == 400:
+                        pygame.draw.rect(screen, YELLOW, note_list[i])
+                    else:
+                        pygame.draw.rect(screen, ORANGE, note_list[i])
                 note_list[i][1] += 5 #Increments on y
 
             pygame.display.flip()
