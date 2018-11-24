@@ -1,8 +1,8 @@
 import random
 import json
 
-w = 1 # Width
-h = 1 # Height
+w = 650 # Width
+h = 800 # Height
 
 random.seed()
 
@@ -18,20 +18,20 @@ def generateCircle(pAF): # pAF stands for previous activation frame
 
     # Life span should allow for some overlap between buttons. Adjust as necessary
     lfspn = 44100 * r(1, 5)
-    
+
     circle = {'x' : r(0, w),
               'y' : r(0, h),
               'Frame' : npAF,
               'Type'  : { 'Lifespan' : lfspn,
                           'PosDelta' : (s(), s()) }}
     return circle
-              
+
 
 def gM():
     impList = []
 
     lastAFrame = 0
-    
+
     numOfImp = int(input('Enter the number of circles you want: '))
     for i in range(0, numOfImp):
         lazyReturn = generateCircle(lastAFrame)
@@ -40,3 +40,5 @@ def gM():
 
     with open('osu.json', 'w') as fOut:
         json.dump(impList, fOut)
+
+gM()

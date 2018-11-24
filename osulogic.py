@@ -27,10 +27,10 @@ class gamelogic:
         BLACK = [0, 0, 0]       # background
         WHITE = [255, 255, 255]
         BLUE = [35, 174, 255]
+        SHADOW = [255, 145, 207]
 
         note_radius = 40
         st = 250                #start time for a note (ms)
-        # et = 10                 #end time for a note (ms)
 
         SIZE = [800, 650]
 
@@ -61,9 +61,20 @@ class gamelogic:
                 et = self.note_list[i]["Type"]["Lifespan"]/44100 * 1000
                 ticks = pygame.time.get_ticks()
                 if (ticks >= (at - st) and ticks <= (at + et)):
+                    j = 0
+                    x = self.note_list[i]["x"]
+                    y = self.note_list[i]["y"]
+                    while j <= et:
+                        pygame.draw.circle(screen, SHADOW, (self.note_list[i]["x"], self.note_list[i]["y"]), note_radius)
+                        self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0])
+                        self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1])
+                        j += 1
+                    self.note_list[i]["x"] = x
+                    self.note_list[i]["y"] = y
+                if (ticks >= (at) and ticks <= (at + et)):
                     pygame.draw.circle(screen, BLUE, (self.note_list[i]["x"], self.note_list[i]["y"]), note_radius)
-                    self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0]*5)
-                    self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1]*5)
+                    self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0]*10)
+                    self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1]*10)
 
             pygame.display.flip()
             clock.tick(60)
