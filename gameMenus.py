@@ -8,6 +8,7 @@ import sys
 from Buttons import *
 from Menu import *
 from gamelogic import *
+from tkinter import filedialog
 
 global WHITE, BLACK, TURQUOISE, GREY, menuList, menuCounter
 menuCounter = [0]
@@ -97,11 +98,24 @@ def hard():
     """
     print("Comming soon!")
 
+def song_selection():
+    """
+    @pre none
+    @param none
+    @post prints comming soon
+    """
+    filename = filedialog.askopenfilename()
+    print(filename)
+    #call haskell function
+    next_menu()
+
+
+
 mainMenu = gui_menu(WHITE, 0, 0, 800, 600, "Keyboard Hero!!!!")
 mainMenu.add_button(gui_button(TURQUOISE, 325, 150, 150, 80, "Play Game", True, next_menu))
 mainMenu.add_button(gui_button(TURQUOISE, 325, 300, 150, 80, "Quit", True, quit_game))
 songMenu = gui_menu(WHITE, 0, 0, 800, 800, "Select A Song!")
-songMenu.add_button(gui_button(TURQUOISE, 175, 150, 450, 80, "Flamingo by Kero Kero Bonito", True, next_menu))
+songMenu.add_button(gui_button(TURQUOISE, 175, 150, 450, 80, "Select Song", True, song_selection))
 songMenu.add_button(gui_button(TURQUOISE, 175, 300, 450, 80, "Back", True, previous_menu))
 modeMenu = gui_menu(WHITE, 0, 0, 800, 800, "Choose a Difficulty")
 modeMenu.add_button(gui_button(TURQUOISE, 325, 150, 150, 80, "Easy", True, easy))
