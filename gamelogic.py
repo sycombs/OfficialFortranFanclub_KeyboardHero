@@ -13,9 +13,16 @@ import math
 class gamelogic:
     note_list = []
     def generate(self, difficulty=1):
-        f = open("osu.json", 'r')
+        f = open("cry.json", 'r')
         list = f.read()
         init_list = json.loads(list)
+        # Constrain x & y to game window
+        for item in init_list:
+            item["osu"]["x"] = math.ceil(item["osu"]["x"]) % 800
+            item["osu"]["y"] = math.ceil(item["osu"]["y"]) % 650
+        # for i in init_list:
+        #     for key, value in i.items():
+        #         print(key, value)
         for i in range(0, len(init_list), (5 - difficulty)):
             self.note_list.append(init_list[i])
 
@@ -83,7 +90,7 @@ class gamelogic:
                 note_list.append(pygame.Rect((600, -act_time), (width, height)))
         return note_list
 
-    def run_standard(self):
+    def run_standard(self, song="song.wav"):
         """
         @pre none
         @param song: wav file
@@ -204,7 +211,7 @@ class gamelogic:
 
         print(score)
 
-    def run_osu(self):
+    def run_osu(self, song="song.wav"):
         """
         @pre none
         @param song: wav file
@@ -291,4 +298,4 @@ class gamelogic:
             self.run_osu()
 
 game = gamelogic()
-game.run_game("song.wav", "osu.json", 2, 1)
+game.run_game("song.wav", "cry.json", 2, 3)
