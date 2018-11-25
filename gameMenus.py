@@ -9,6 +9,7 @@ from Buttons import *
 from Menu import *
 from gamelogic import *
 from tkinter import filedialog
+import os
 
 global WHITE, BLACK, TURQUOISE, GREY, menuList, menuCounter
 menuCounter = [0]
@@ -106,7 +107,8 @@ def song_selection():
     """
     filename = filedialog.askopenfilename()
     print(filename)
-    #call haskell function
+    h = 'ghc bm_gen.hs -e'
+    os.system(h)
     next_menu()
 
 
