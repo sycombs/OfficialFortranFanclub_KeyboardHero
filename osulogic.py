@@ -29,7 +29,7 @@ class gamelogic:
         BLUE = [35, 174, 255]
         SHADOW = [255, 145, 207]
 
-        note_radius = 40
+        note_radius = 50
         st = 250                #start time for a note (ms)
 
         SIZE = [800, 650]
@@ -40,8 +40,8 @@ class gamelogic:
         self.generate()
 
         clock = pygame.time.Clock()
-        # pygame.mixer.music.load(song)
-        # pygame.mixer.music.play(0)
+        pygame.mixer.music.load(song)
+        pygame.mixer.music.play(0)
 
         score = 0
 
@@ -60,21 +60,29 @@ class gamelogic:
                 at = self.note_list[i]["Frame"]/44100 * 1000
                 et = self.note_list[i]["Type"]["Lifespan"]/44100 * 1000
                 ticks = pygame.time.get_ticks()
-                if (ticks >= (at - st) and ticks <= (at + et)):
-                    j = 0
-                    x = self.note_list[i]["x"]
-                    y = self.note_list[i]["y"]
-                    while j <= et:
-                        pygame.draw.circle(screen, SHADOW, (self.note_list[i]["x"], self.note_list[i]["y"]), note_radius)
-                        self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0])
-                        self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1])
-                        j += 1
-                    self.note_list[i]["x"] = x
-                    self.note_list[i]["y"] = y
-                if (ticks >= (at) and ticks <= (at + et)):
-                    pygame.draw.circle(screen, BLUE, (self.note_list[i]["x"], self.note_list[i]["y"]), note_radius)
-                    self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0]*10)
-                    self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1]*10)
+                if (self.note_list[i]["Type"]["Lifespan"] > 44100):
+                    if (ticks >= (at - st) and ticks <= (at + et)):
+                        j = 0
+                        x = self.note_list[i]["x"]
+                        y = self.note_list[i]["y"]
+                        while j < (self.note_list[i]["Type"]["Lifespan"]):
+                            pygame.draw.circle(screen, SHADOW, (self.note_list[i]["x"], self.note_list[i]["y"]), note_radius)
+                            self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0])
+                            self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1])
+                            j += 44100
+                        self.note_list[i]["x"] = x
+                        self.note_list[i]["y"] = y
+                        # TODO: Fix non-drag notes
+                        # maybe need to decrement lifespan?
+                    if (ticks >= (at) and ticks <= (at + et)):
+                        pygame.draw.circle(screen, BLUE, (self.note_list[i]["x"], self.note_list[i]["y"]), note_radius)
+                        self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0]*10)
+                        self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1]*10)
+                else:
+                    if (ticks >= (at - st) and ticks <= (at + et)):
+                        pygame.draw.circle(screen, BLUE, (self.note_list[i]["x"], self.note_list[i]["y"]), note_radius)
+                        # self.note_list[i]["x"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][0]*10)
+                        # self.note_list[i]["y"] += math.ceil(self.note_list[i]["Type"]["PosDelta"][1]*10)
 
             pygame.display.flip()
             clock.tick(60)

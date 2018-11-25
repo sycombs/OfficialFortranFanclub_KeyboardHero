@@ -1,8 +1,8 @@
 import random
 import json
 
-w = 650 # Width
-h = 800 # Height
+w = 550 # Width
+h = 700 # Height
 
 random.seed()
 
