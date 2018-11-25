@@ -72,7 +72,7 @@ class gui_menu:
         window.blit(self.surf, self.rect)
         self.surf.fill((255, 255, 255))
         if(self.text!=""):
-            self.create_text("Game Over", self.surf, self.width*.5, self.height*.1)
+            self.create_text(self.text, self.surf, self.width*.5, self.height*.1)
 
         for items in self.buttonList:
             items.draw(self.surf, size)

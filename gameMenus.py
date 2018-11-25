@@ -8,6 +8,7 @@ import sys
 from Buttons import *
 from Menu import *
 from gamelogic import *
+from tkinter import *
 from tkinter import filedialog
 import os
 
@@ -105,9 +106,13 @@ def song_selection():
     @param none
     @post prints comming soon
     """
+
+    root = Tk()
     filename = filedialog.askopenfilename()
+    root.destroy()
     print(filename)
-    h = 'ghc bm_gen.hs -e'
+
+    h = 'ghc bm_gen.hs -e "main"'
     os.system(h)
     next_menu()
 
