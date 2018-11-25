@@ -11,10 +11,13 @@ import json
 import math
 
 class gamelogic:
-    def generate(self):
+    note_list = []
+    def generate(self, difficulty=1):
         f = open("osu.json", 'r')
         list = f.read()
-        self.note_list = json.loads(list)
+        init_list = json.loads(list)
+        for i in range(0, len(init_list), (5 - difficulty)):
+            self.note_list.append(init_list[i])
 
     def run_game(self, song = "song.wav", beatmap_file = "output.txt", mode = 1, difficulty = 1):
         """
