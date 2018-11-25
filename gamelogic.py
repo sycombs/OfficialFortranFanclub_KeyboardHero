@@ -25,70 +25,6 @@ class gamelogic:
         for i in range(0, len(init_list), (5 - difficulty)):
             self.note_list.append(init_list[i])
 
-    # def get_beatmap(self, file = "output.txt"):
-    #     """
-    #     @pre none
-    #     @param file: the beatmap file
-    #     @post gets beatmap out of file. Each note gets two indexes, 1) Note number and activation frame and 2) Directions
-    #     @return beatmap: a list of all notes in a beatmap
-    #     """
-    #     f = open(file, 'r')
-    #     if f.mode == 'r':
-    #         beatmap = f.read().split('\n')
-    #     return beatmap
-
-    # def convert_beatmap(self, beatmap):
-    #     """
-    #     @pre none
-    #     @param beatmap: a list of notes where each note has two indexes, 1) Nonte number & activation frame, 2) Directions
-    #     @post converts the beatmap to a dictionary of notes which contains their Directions
-    #     @return beatmap_arr: the converted beatmap
-    #     """
-    #     beatmap_arr = []
-    #     for i in range(1, len(beatmap), 2):
-    #         current_note = ast.literal_eval(beatmap[i])
-    #         beatmap_arr.append(current_note)
-    #     return beatmap_arr
-
-    # def get_activation_frames(self, beatmap):
-    #     """
-    #     @pre none
-    #     @param beatmap: a list of notes where each note has two indexes, 1) Nonte number & activation frame, 2) Directions
-    #     @post gets a list of activation frames
-    #     @return af_arr: list of activation frames
-    #     """
-    #     af_arr = []
-    #     for i in range(0, len(beatmap)-1, 2):
-    #         frame = int(beatmap[i].split(": ")[1])
-    #         af_arr.append(frame)
-    #     return af_arr
-
-    # def generate_notelist(self, beatmap_arr, frames, width, height):
-    #     """
-    #     @pre None
-    #     @param beatmap_arr: list of note dictionaries (w/ directions)
-    #     @param frames: list of activation frames
-    #     @param width: note width
-    #     @param height: note height
-    #     @post generates a list of pygame rects corresponding to each note
-    #     @return note_list: list of rects
-    #     """
-    #     note_list = []
-    #     act_time = frames[0]
-    #     for i in range(len(beatmap_arr)):
-    #         act_time = frames[i]/44100              #second at which it should be activiated
-    #         act_time = act_time*300
-    #         act_time = act_time + 550
-    #         if beatmap_arr[i]['Up']:
-    #             note_list.append(pygame.Rect((200, -act_time), (width, height)))
-    #         elif beatmap_arr[i]['Down']:
-    #             note_list.append(pygame.Rect((400, -act_time), (width, height)))
-    #         elif beatmap_arr[i]['Left']:
-    #             note_list.append(pygame.Rect((0, -act_time), (width, height)))
-    #         else:
-    #             note_list.append(pygame.Rect((600, -act_time), (width, height)))
-    #     return note_list
-
     def map(self, width, height):
         self.map = []
         at = 0
@@ -133,11 +69,6 @@ class gamelogic:
 
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("Keyboard Hero")
-
-        # beatmap = self.get_beatmap(beatmap_file)
-        # frames = self.get_activation_frames(beatmap)
-        # beatmap_seq = self.convert_beatmap(beatmap)
-        # note_list = self.generate_notelist(beatmap_seq, frames, note_width, note_height)
 
         self.generate()
         self.map(note_width, note_height)
@@ -280,19 +211,24 @@ class gamelogic:
 
             screen.fill(BLACK)
 
+            mouse = pygame.mouse.get_pressed()
+            pos = pygame.mouse.get_pos()
+
             for i in range(len(self.note_list)):
                 at = self.note_list[i]["act_frame"]/44100 * 1000            #activation time
-                # et = self.note_list[i]["Type"]["Lifespan"]/44100 * 1000
                 ticks = pygame.time.get_ticks()
                 if (ticks >= (at - st) and ticks <= (at)):
                     button = circle_button(self.note_list[i]["osu"]["x"], self.note_list[i]["osu"]["y"], note_radius, BLUE)
                     button.draw(screen)
-                    # pygame.draw.circle(screen, BLUE, (self.note_list[i]["osu"]["x"], self.note_list[i]["osu"]["y"]), note_radius)
                     pygame.draw.circle(screen, SHADOW, (self.note_list[i]["osu"]["x"], self.note_list[i]["osu"]["y"]), note_radius + inc, 1)
                     inc = inc - 1
+                    if mouse[0]:
+                        if button.is_clicked(pos[0], pos[1]):
+                            self.note_list[i]["act_frame"] = 0
+                            inc = 60
+                            score += 1
                     if inc == 0 or ticks == at:
                         inc = 60
-                        # del self.note_list[i]
 
             pygame.display.flip()
             clock.tick(60)
@@ -313,4 +249,4 @@ class gamelogic:
             self.run_osu()
 
 game = gamelogic()
-game.run_game("song.wav", "cry.json", 1, 3)
+game.run_game("song.wav", "cry.json", 2, 3)
