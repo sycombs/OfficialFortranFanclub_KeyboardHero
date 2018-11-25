@@ -1,33 +1,107 @@
-import System.IO
-import Data.WAVE
+{-# LANGUAGE DeriveGeneric #-}
+
+import Data.Aeson
 import Data.List
 import Data.Int
+import Data.WAVE
+import GHC.Generics
+import Data.Complex
+import System.IO
+import Data.Ratio
 
 main = do
-   h <- openFile "song.wav" ReadMode
    wav <- getWAVEFile "song.wav"
-   let lImps = (putStr . pOut 1) (impulse 1 $ splitChan $ waveSamples wav)
-   return lImps
+   -- Add getting the song length and an error check?
+   let imps = abs.head <$> waveSamples wav :: [WAVESample]
+   --return $ take 100 $ d' imps
+--   return $ fImp 1 imps
+   encodeFile "cry.json" (fImp 1 imps)
 
-splitChan :: WAVESamples -> [WAVESample]
-splitChan cs = [samp | samp <- map (\x -> head x) cs]
 
-impulse f [] = []
-impulse f xs =
-   if (d > 35000) then [(f * 1470 + 1, d)] ++ i'
-   else [] ++ i'
-   where d = (abs $ a - b) `div` 5000
-         a = foldl' (+) 0 (take 735 xs)
-         b = foldl' (+) 0 (take 735 $ drop 735 xs)
-         i' = impulse (f + 1) (drop 1470 xs)
+--fImp :: Int -> [WAVESample] -> [Impulse]
+fImp _ []  = []
+fImp i xs  = (diff f p1) ++ (fImp (i + 1) p2)
+  where p1 = take 1470 xs
+        p2 = drop 1470 xs
+        f  = (i * 1470) + 1
+        --p  = splitAt 1470 xs
 
-pOut :: Int -> [(Int, WAVESample)] -> String
-pOut n [] = []
-pOut n (f:fs) = (line1 ++ line2) ++ pOut (n + 1) fs
-   where line1 = "Note #" ++ (show n) ++ " - Activation Frame: " ++ show (fst f) ++ "\n"
-         line2 = "{'Up': " ++ u ++ ", 'Down': " ++ d ++ ", 'Left': " ++ l ++ ", 'Right': " ++ r ++ "}\n"
-         u = if ((350000 <= x) && (x < 375000)) then "1" else "0"
-         d = if ((375000 <= x) && (x < 400000)) then "1" else "0"
-         l = if ((400000 <= x) && (x < 425000)) then "1" else "0"
-         r = if (x >= 425000) then "1" else "0"
-         x = snd f
+
+
+diff :: Integral a => Double -> [a] -> [Impulse]
+diff f ss
+  | d > 39000 = [i]
+  | otherwise = [ ]
+  where a = foldl' (+) 0 $ take 735 ss
+        b = foldl' (+) 0 $ drop 735 ss
+        d = (abs $ a - b) `div` 50000 --fromIntegral $ (abs $ a - b) `div` 50000
+        i = pImp $ f :+ (fromIntegral d)
+
+
+pImp :: Complex Double -> Impulse
+pImp c = Impulse a r o
+  where a = toInteger $ ceiling $ realPart c
+        r = genButton a
+        o = genCircle c
+
+
+
+genButton :: Integral a => a -> RB
+genButton d -- And hold / not hold?
+  | m == 0    = RB 'U'
+  | m == 1    = RB 'D'
+  | m == 2    = RB 'L'
+  | otherwise = RB 'R'
+  where m = d `mod` 4
+
+
+-- !! Neither width or height actually do anything right now
+genCircle :: Complex Double -> Osu
+genCircle d = Osu xPos yPos -- Drag and not drag data?
+  where width  = 725 -- w = Width - 75 (Width and height from game board file)
+        height = 525 -- h = Height - 75
+        xPos   = radius * (cos theta)
+        yPos   = radius * (sin theta)
+        radius = magnitude d
+        theta  = phase d
+
+
+data Impulse = Impulse {
+  act_frame :: Integer,
+  rb        :: RB,
+  osu       :: Osu
+  } deriving (Generic, Show)
+
+newtype RB = RB {
+  button :: Char
+  } deriving (Generic, Show)
+
+-- newtype Osu = Osu {
+--    pos :: Complex Double
+--    } deriving (Generic, Show)
+
+
+
+
+data Osu = Osu {
+  x         :: Double,
+  y         :: Double
+  } deriving (Generic, Show)
+--life_span :: Int,
+--  pos_delta :: Double
+
+
+
+instance ToJSON Impulse where
+  toEncoding = genericToEncoding defaultOptions
+instance FromJSON Impulse
+
+
+instance ToJSON RB where
+  toEncoding = genericToEncoding defaultOptions
+instance FromJSON RB
+
+
+instance ToJSON Osu where
+  toEncoding = genericToEncoding defaultOptions
+instance FromJSON Osu
