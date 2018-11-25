@@ -2,11 +2,12 @@
 gamelogic.py
 All of the functions to convert beatmap and run a game
 """
-
+import Scoring
 import pygame
 import ast
 import Buttons
 import sys
+import hollow
 
 class gamelogic:
     def get_beatmap(self, file = "output.txt"):
@@ -87,6 +88,7 @@ class gamelogic:
         BLUE = [35, 174, 255] # up
         YELLOW = [255, 203, 73] # down
         ORANGE = [255, 77, 22] # right
+        GREY = [100,100,100] #for text
 
         BUTTON_PINK = [181, 61, 129]
         BUTTON_BLUE = [14, 89, 132]
@@ -97,6 +99,8 @@ class gamelogic:
         note_width = 200
 
         SIZE = [800, 650]
+
+        font = pygame.font.Font(None, 30) #font size and style for score
 
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("Keyboard Hero")
@@ -110,14 +114,14 @@ class gamelogic:
         pygame.mixer.music.load(song)
         pygame.mixer.music.play(0)
 
-        left_button = Buttons.gui_button(BUTTON_PINK,0,600,note_width,note_height,'Left',True)
-        up_button = Buttons.gui_button(BUTTON_BLUE,200,600,note_width,note_height,'Up',True)
-        down_button = Buttons.gui_button(BUTTON_YELLOW,400,600,note_width,note_height,'Down',True)
-        right_button = Buttons.gui_button(BUTTON_ORANGE,600,600,note_width,note_height,'Right',True)
+        left_button = Buttons.key_button(BUTTON_PINK,0,600,note_width,note_height,'Left',True)
+        up_button = Buttons.key_button(BUTTON_BLUE,200,600,note_width,note_height,'Up',True)
+        down_button = Buttons.key_button(BUTTON_YELLOW,400,600,note_width,note_height,'Down',True)
+        right_button = Buttons.key_button(BUTTON_ORANGE,600,600,note_width,note_height,'Right',True)
         button_list = [left_button,up_button,down_button,right_button]
 
         score = 0
-
+        current_combo = 1
         done = False
         while not done:
 
@@ -134,8 +138,9 @@ class gamelogic:
                 left_button.mouse_over = True
                 left_button.on_click()
                 if left_button.rect.collidelist(note_list) != -1:
-                    score += 1
                     index = left_button.rect.collidelist(note_list)
+                    score_mod, current_combo = Scoring.increment_score(left_button.check_hitbox(note_list[index]),current_combo)
+                    score += score_mod
                     del note_list[index] #remove note from list
             else:
                 left_button.mouse_over = False
@@ -144,8 +149,9 @@ class gamelogic:
                 up_button.mouse_over = True
                 up_button.on_click()
                 if up_button.rect.collidelist(note_list) != -1:
-                    score += 1
                     index = up_button.rect.collidelist(note_list)
+                    score_mod, current_combo = Scoring.increment_score(up_button.check_hitbox(note_list[index]),current_combo)
+                    score += score_mod
                     del note_list[index]
             else:
                 up_button.mouse_over = False
@@ -154,8 +160,9 @@ class gamelogic:
                 down_button.mouse_over = True
                 down_button.on_click()
                 if down_button.rect.collidelist(note_list) != -1:
-                    score += 1
                     index = down_button.rect.collidelist(note_list)
+                    score_mod, current_combo = Scoring.increment_score(down_button.check_hitbox(note_list[index]),current_combo)
+                    score += score_mod
                     del note_list[index]
             else:
                 down_button.mouse_over = False
@@ -164,8 +171,9 @@ class gamelogic:
                 right_button.mouse_over = True
                 right_button.on_click()
                 if right_button.rect.collidelist(note_list) != -1:
-                    score += 1
                     index = right_button.rect.collidelist(note_list)
+                    score_mod, current_combo = Scoring.increment_score(right_button.check_hitbox(note_list[index]),current_combo)
+                    score += score_mod
                     del note_list[index]
             else:
                 right_button.mouse_over = False
@@ -186,6 +194,11 @@ class gamelogic:
                     else:
                         pygame.draw.rect(screen, ORANGE, note_list[i])
                 note_list[i][1] += 5 #Increments on y
+
+            score_text = hollow.textOutline(font,"Score: " + str(score),GREY,WHITE)
+            combo_text = hollow.textOutline(font,"Combo: x" + str(current_combo),GREY,WHITE)
+            screen.blit(score_text, (SIZE[0]/2,0))
+            screen.blit(combo_text, (SIZE[0]/2,20))
 
             pygame.display.flip()
             clock.tick(60)
