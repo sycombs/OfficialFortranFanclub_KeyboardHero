@@ -269,7 +269,7 @@ class gamelogic:
 
         print(score)
 
-    def run_game(self, song = "song.wav", beatmap_file = "output.txt", mode = 1, difficulty = 1):
+    def run_game(self, song = "song.wav", beatmap_file = "beatmap.json", mode = 1, difficulty = 1):
         """
         @pre none
         @param song: wav file
@@ -283,5 +283,5 @@ class gamelogic:
         else:
             self.run_osu(song)
 
-# game = gamelogic()
-# game.run_game("song.wav", "cry.json", 1, 3)
+game = gamelogic()
+game.run_game("song.wav", "beatmap.json", 2, 3)
