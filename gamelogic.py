@@ -284,6 +284,3 @@ class gamelogic:
             self.run_standard(song)
         else:
             self.run_osu(song)
-
-game = gamelogic()
-game.run_game("song.wav", "beatmap.json", 2, 3)

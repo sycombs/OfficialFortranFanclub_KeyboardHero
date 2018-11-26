@@ -1,6 +1,6 @@
 """
 gamelogicTester.py
-This is a gamelogic tester.
+This is a gamelogic tester. Revised from gamelogic.py
 """
 
 from gamelogic import *
