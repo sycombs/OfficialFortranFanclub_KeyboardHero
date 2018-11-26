@@ -195,6 +195,7 @@ class gamelogic:
         WHITE = [255, 255, 255]
         BLUE = [35, 174, 255]
         SHADOW = [255, 145, 207]
+        GREY = [100,100,100] #for text
 
         note_radius = 50
         st = 1000                #start time for a note (ms)
@@ -203,16 +204,19 @@ class gamelogic:
 
         SIZE = [800, 650]
 
+        font = pygame.font.Font(None, 30) #font size and style for score
+
+
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("'Osu' Hero")
 
         self.generate()
-
         clock = pygame.time.Clock()
         pygame.mixer.music.load(song)
         pygame.mixer.music.play(0)
 
         score = 0
+        current_combo = 1
 
         done = False
         while not done:
@@ -241,10 +245,22 @@ class gamelogic:
                     if mouse[0]:
                         if button.is_clicked(pos[0], pos[1]):
                             self.note_list[i]["act_frame"] = 0
-                            inc = INC_C
-                            score += 1
-                if inc == 0 or ticks == at:
-                    inc = INC_C
+                            if inc in range(41,60):
+                                temp_score, current_combo = Scoring.increment_score(1,current_combo)
+                            elif inc in range(21,40):
+                                temp_score, current_combo = Scoring.increment_score(2,current_combo)
+                            else:
+                                temp_score, current_combo = Scoring.increment_score(3,current_combo)
+                            score += temp_score
+                            inc = 60
+                    if inc == 0 or ticks == at:
+                        current_combo = 1
+                        inc = 60
+
+            score_text = hollow.textOutline(font,"Score: " + str(score),GREY,WHITE)
+            combo_text = hollow.textOutline(font,"Combo: x" + str(current_combo),GREY,WHITE)
+            screen.blit(score_text, (SIZE[0]/2,0))
+            screen.blit(combo_text, (SIZE[0]/2,20))
 
             pygame.display.flip()
             clock.tick(60)
@@ -263,9 +279,9 @@ class gamelogic:
         @post runs game
         """
         if mode == 1:
-            self.run_standard()
+            self.run_standard(song)
         else:
-            self.run_osu()
+            self.run_osu(song)
 
-game = gamelogic()
-game.run_game("song.wav", "cry.json", 2, 3)
+# game = gamelogic()
+# game.run_game("song.wav", "cry.json", 1, 3)
