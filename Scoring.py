@@ -10,11 +10,14 @@ def increment_score(number_collisions, current_combo):
     @param current_combo: int: current combo multiplier
     @return (score, new combo): (int, int)
     '''
-    if number_collisions > 1:
-        #we only increase combo multiplier on great or perfect
-        if current_combo != COMBO_LIST[2]:
-            #Here 2 is the max index of combo_list
-            #if we are not at max combo, increment combo, return score,combo
-            return (number_collisions * current_combo, COMBO_LIST[COMBO_LIST.index(current_combo) + 1])
-        return (number_collisions * current_combo, current_combo)
-    return number_collisions, COMBO_LIST[0]
+    if current_combo in COMBO_LIST:
+        if number_collisions > 1:
+            #we only increase combo multiplier on great or perfect
+            if current_combo != COMBO_LIST[2]:
+                #Here 2 is the max index of combo_list
+                #if we are not at max combo, increment combo, return score,combo
+                return (number_collisions * current_combo, COMBO_LIST[COMBO_LIST.index(current_combo) + 1])
+            return (number_collisions * current_combo, current_combo)
+        return number_collisions, COMBO_LIST[0]
+    else:
+        raise ValueError("Trying to pass in a combo not in combo list!")
