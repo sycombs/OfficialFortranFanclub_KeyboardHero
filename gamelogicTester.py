@@ -5,8 +5,6 @@ This is a gamelogic tester. Revised from gamelogic.py
 
 from gamelogic import *
 
-# 5-6 tests
-
 """
 gamelogic.py
 All of the functions to convert beatmap and run a game
