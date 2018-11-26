@@ -10,32 +10,17 @@ import Data.WAVE
 import GHC.Generics
 import Data.Complex
 import System.IO
-import System.Exit
-import Control.Exception
 
 main = do
-  -- Load JSON to read parameters
   wav <- getWAVEFile "song.wav"
   let imps = abs.head <$> waveSamples wav :: [WAVESample]
   encodeFile "beatmap.json" (findImpulse 1 imps)
-
-newtype GameParam = GameParam {
-   file_name :: String
-   } deriving (Generic, Show) -- Just using show to make sure this works
-
-instance FromJSON GameParam
-
-
-data MyException = ThisException | ThatException
-    deriving Show
-
-instance Exception MyException
 
 boundsCheck :: (Integer, Integer, Integer) -> Integer
 boundsCheck (dimVal, dMin, dMax)
   | dimVal < dMin = dMin
   | dimVal > dMax = dMax
-  | otherwise = dimVal
+  | otherwise     = dimVal
 
 findImpulse :: Integral a => Double -> [a] -> [Impulse]
 findImpulse _ []  = []
@@ -60,17 +45,15 @@ processImpulse compDoub = Impulse actFrame rb osu
         rb              = RB $ genButton actFrame
         osu             = genCircle compDoub
 
-
 {- Button Generation Functions -}
 
 genButton :: Integer -> Char
 genButton d
-  | m == 0    = 'U'
-  | m == 1    = 'D'
-  | m == 2    = 'L'
-  | otherwise = 'R'
-  where m = (abs d) `mod` 4
-
+  | s >= 1250 = 'U'
+  | s >= 900 = 'D'
+  | s >= 500    = 'L'
+  | otherwise   = 'R'
+  where s = d `div` 5000
 
 genCircle :: Complex Double -> Osu
 genCircle d = Osu xPos yPos -- Drag and not drag data?
@@ -98,13 +81,6 @@ data Osu = Osu {
   x         :: Integer,
   y         :: Integer
   } deriving (Generic, Show)
-
--- data Osu = Osu {
---   x         :: Double,
---   y         :: Double
---   } deriving (Generic, Show)
-
-{- JSON Encoders / Decoders -}
 
 instance ToJSON Impulse where
   toEncoding = genericToEncoding defaultOptions
