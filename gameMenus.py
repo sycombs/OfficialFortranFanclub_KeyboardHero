@@ -15,7 +15,7 @@ import json
 
 global WHITE, BLACK, TURQUOISE, GREY, menuList, menuCounter
 menuCounter = [0]
-gameControls = ['song.wav','output.txt',1,1]
+gameControls = ['song.wav','beatmap.json',1,1]
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 TURQUOISE = (0,245,255)
