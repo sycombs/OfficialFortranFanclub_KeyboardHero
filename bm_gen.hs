@@ -42,18 +42,18 @@ differenceFinder frame ss
 processImpulse :: Complex Double -> Impulse
 processImpulse compDoub = Impulse actFrame rb osu
   where actFrame        = toInteger $ ceiling $ realPart compDoub
-        rb              = RB $ genButton actFrame
+        rb              = RB $ 'A'
         osu             = genCircle compDoub
 
 {- Button Generation Functions -}
 
-genButton :: Integer -> Char
-genButton d
-  | s >= 1250 = 'U'
-  | s >= 900 = 'D'
-  | s >= 500    = 'L'
-  | otherwise   = 'R'
-  where s = d `div` 5000
+-- genButton :: Integer -> Char
+-- genButton d
+--   | s >= 1250 = 'U'
+--   | s >= 900  = 'D'
+--   | s >= 500  = 'L'
+--   | otherwise = 'R'
+--   where s = d `div` 5000
 
 genCircle :: Complex Double -> Osu
 genCircle d = Osu xPos yPos -- Drag and not drag data?
