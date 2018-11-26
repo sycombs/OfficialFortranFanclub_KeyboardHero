@@ -13,19 +13,32 @@ import hollow
 
 class gamelogic:
     note_list = []
-    map = []            #standard mode only
+    map = []                  #standard mode only
     def generate(self, difficulty=1):
+        """
+        @pre need valid beatmap file
+        @param difficulty: 1 = easy (default), 2 = normal, 3 = hard
+        @post generates a list of note dictionaries
+        """
         f = open("cry.json", 'r')
         list = f.read()
         init_list = json.loads(list)
+
         # Constrain x & y to game window
         for item in init_list:
             item["osu"]["x"] = math.ceil(item["osu"]["x"]) % 800
             item["osu"]["y"] = math.ceil(item["osu"]["y"]) % 650
+
         for i in range(0, len(init_list), (5 - difficulty)):
             self.note_list.append(init_list[i])
 
     def map(self, width, height):
+        """
+        @pre valid width & height
+        @param width: width of note
+        @param height: height of note
+        @post generates a visible beatmap for standard mode game
+        """
         self.map = []
         at = 0
         for item in self.note_list:
@@ -43,7 +56,7 @@ class gamelogic:
         """
         @pre none
         @param song: wav file
-        @post runs song & beatmap - runs game
+        @post runs standard mode
         """
         pygame.init()
 
@@ -174,7 +187,7 @@ class gamelogic:
         """
         @pre none
         @param song: wav file
-        @post runs song & beatmap - runs game
+        @post runs osu mode
         """
         pygame.init()
 
@@ -190,7 +203,7 @@ class gamelogic:
         SIZE = [800, 650]
 
         screen = pygame.display.set_mode(SIZE)
-        pygame.display.set_caption("Osu Hero")
+        pygame.display.set_caption("'Osu' Hero")
 
         self.generate()
 
@@ -241,7 +254,10 @@ class gamelogic:
         """
         @pre none
         @param song: wav file
-        @post runs song & beatmap - runs game
+        @param beatmap_file: the corresponding beatmap to the song
+        @param mode: 1 for standard, 2 for osu
+        @param difficulty: 1 = easy, 2 = normal, 3 = hard
+        @post runs game
         """
         if mode == 1:
             self.run_standard()
@@ -249,4 +265,4 @@ class gamelogic:
             self.run_osu()
 
 game = gamelogic()
-game.run_game("song.wav", "cry.json", 2, 3)
+game.run_game("song.wav", "cry.json", 1, 3)
