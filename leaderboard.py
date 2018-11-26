@@ -17,7 +17,7 @@ def leaderboard_control(song_name, mode, difficulty, score):
         print('Congratulations! You got a High Score!\n')
         player_name = input('Enter Name:')
         add_score(song_name, mode, difficulty, player_name, score)
-        print('Highscores for', song_name, 'on ', difficultyRank[difficulty-1], ':\nRank\tPlayer\t\tScore')
+        print('Highscores for', song_name, 'on', difficultyRank[difficulty-1], ':\nRank\tPlayer\t\tScore')
         print_scores(song_name, mode, difficulty)
 
     else:
