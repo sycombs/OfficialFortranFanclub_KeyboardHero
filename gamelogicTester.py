@@ -33,8 +33,8 @@ class gamelogic_view_only:
 
         # Constrain x & y to game window
         for item in init_list:
-            item["osu"]["x"] = math.ceil(item["osu"]["x"]) % 800
-            item["osu"]["y"] = math.ceil(item["osu"]["y"]) % 650
+            item["osu"]["x"] = math.ceil(item["osu"]["x"])
+            item["osu"]["y"] = math.ceil(item["osu"]["y"])
 
         for i in range(0, len(init_list), (5 - difficulty)):
             self.note_list.append(init_list[i])
