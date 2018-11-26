@@ -198,7 +198,8 @@ class gamelogic:
 
         note_radius = 50
         st = 1000                #start time for a note (ms)
-        inc = 60
+        INC_C = 60
+        inc = INC_C
 
         SIZE = [800, 650]
 
@@ -229,19 +230,21 @@ class gamelogic:
 
             for i in range(len(self.note_list)):
                 at = self.note_list[i]["act_frame"]/44100 * 1000            #activation time
+                outer_rad = note_radius + inc
                 ticks = pygame.time.get_ticks()
                 if (ticks >= (at - st) and ticks <= (at)):
                     button = circle_button(self.note_list[i]["osu"]["x"], self.note_list[i]["osu"]["y"], note_radius, BLUE)
                     button.draw(screen)
-                    pygame.draw.circle(screen, SHADOW, (self.note_list[i]["osu"]["x"], self.note_list[i]["osu"]["y"]), note_radius + inc, 1)
-                    inc = inc - 1
+                    if (outer_rad > note_radius):
+                        pygame.draw.circle(screen, SHADOW, (self.note_list[i]["osu"]["x"], self.note_list[i]["osu"]["y"]), outer_rad, 1)
+                        inc = inc - 1
                     if mouse[0]:
                         if button.is_clicked(pos[0], pos[1]):
                             self.note_list[i]["act_frame"] = 0
-                            inc = 60
+                            inc = INC_C
                             score += 1
-                    if inc == 0 or ticks == at:
-                        inc = 60
+                if inc == 0 or ticks == at:
+                    inc = INC_C
 
             pygame.display.flip()
             clock.tick(60)
@@ -265,4 +268,4 @@ class gamelogic:
             self.run_osu()
 
 game = gamelogic()
-game.run_game("song.wav", "cry.json", 1, 3)
+game.run_game("song.wav", "cry.json", 2, 3)
