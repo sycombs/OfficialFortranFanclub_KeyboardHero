@@ -10,14 +10,18 @@ import sys
 import json
 import math
 import hollow
+<<<<<<< HEAD
 from leaderboard import *
+=======
+# import leaderboard
+>>>>>>> 845d96de1b1b1e23c54d789e6999a55f4cc7226c
 
 song_info = ['',1,1]
 
 class gamelogic:
     note_list = []
     map = []                  #standard mode only
-    def generate(self, difficulty=1):
+    def generate(self, difficulty):
         """
         @pre need valid beatmap file
         @param difficulty: 1 = easy (default), 2 = normal, 3 = hard
@@ -55,7 +59,7 @@ class gamelogic:
             else:
                 self.map.append(pygame.Rect((600, -at), (width, height)))
 
-    def run_standard(self, song="song.wav"):
+    def run_standard(self, song="song.wav", beatmap_file="beatmap.json", difficulty=1):
         """
         @pre none
         @param song: wav file
@@ -86,7 +90,7 @@ class gamelogic:
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("Keyboard Hero")
 
-        self.generate()
+        self.generate(difficulty)
         self.map(note_width, note_height)
 
         clock = pygame.time.Clock()
@@ -192,7 +196,7 @@ class gamelogic:
         # leaderboard_control(song_info[0], song_info[1], song_info[2], score)
 
 
-    def run_osu(self, song="song.wav"):
+    def run_osu(self, song="song.wav", beatmap_file="beatmap.json", difficulty=1):
         """
         @pre none
         @param song: wav file
@@ -219,7 +223,7 @@ class gamelogic:
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("'Osu' Hero")
 
-        self.generate()
+        self.generate(difficulty)
         clock = pygame.time.Clock()
         pygame.mixer.music.load(song)
         pygame.mixer.music.play(0)
@@ -296,6 +300,6 @@ class gamelogic:
         song_info[2] = difficulty
 
         if mode == 1:
-            self.run_standard(song)
+            self.run_standard(song, beatmap_file, difficulty)
         else:
-            self.run_osu(song)
+            self.run_osu(song, beatmap_file, difficulty)
