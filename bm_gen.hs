@@ -17,8 +17,7 @@ main = do
   -- Load JSON to read parameters
   wav <- getWAVEFile "song.wav"
   let imps = abs.head <$> waveSamples wav :: [WAVESample]
-  return $ findImpulse 1 imps
-  --encodeFile "beatmap.json" (findImpulse 1 imps)
+  encodeFile "beatmap.json" (findImpulse 1 imps)
 
 newtype GameParam = GameParam {
    file_name :: String
@@ -32,7 +31,7 @@ data MyException = ThisException | ThatException
 
 instance Exception MyException
 
-boundsCheck :: (Double, Double, Double) -> Double
+boundsCheck :: (Integer, Integer, Integer) -> Integer
 boundsCheck (dimVal, dMin, dMax)
   | dimVal < dMin = dMin
   | dimVal > dMax = dMax
@@ -77,11 +76,11 @@ genCircle :: Complex Double -> Osu
 genCircle d = Osu xPos yPos -- Drag and not drag data?
   where width  = 725 -- w = Width - 75 (Width and height from game board file)
         height = 525 -- h = Height - 75
-        xPos   = (toInteger radius) `mod` width
-        yPos   = (toInteger radius) `mod` height
         radius = ceiling $ magnitude d
-        theta  = phase d
-        minVal = 50
+        xTrans = (toInteger radius) `mod` width
+        yTrans = (toInteger radius) `mod` height
+        xPos   = boundsCheck (xTrans, 50, width) -- We use 50 as a min because of
+        yPos   = boundsCheck (yTrans, 50, height) -- the circle button's radii
 
 {- Data Types -}
 
