@@ -3,6 +3,8 @@
 
 module BM_Gen where
 
+-- ghc bm_gen.hs -e "main"
+
 import Data.Aeson
 import Data.List
 import Data.Int
