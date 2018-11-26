@@ -1,6 +1,5 @@
-'''
-button_tester.py
-testing buttons.py & scoring
+'''@package docstring
+button_tester.py includes testing methods for buttons.py & scoring.py
 '''
 
 from Buttons import *
@@ -35,7 +34,7 @@ def test_button_get_rect():
         print("True")
     else:
         print("False")
-        
+
 def test_key_button_hitbox():
     print("check_hitbox correctly returns number of collisions:", end=" ")
     button = key_button((0,0,0),0,0,40,40,"None")
