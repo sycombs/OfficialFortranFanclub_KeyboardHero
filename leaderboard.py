@@ -9,27 +9,28 @@ config = {
   'raise_on_warnings': True
 }
 
-def leaderboard_control(song_name, difficulty, score):
-    if check_score(score):
+def leaderboard_control(song_name, mode, difficulty, score):
+    song_name = song_name[:-4]
+    if check_score(song_name, mode, difficulty, score):
         print('Congratulations! You got a High Score!\n')
         player_name = input('Enter Name:')
-        add_score(song_name, difficulty, player_name, score)
+        add_score(song_name, mode, difficulty, player_name, score)
         print('Highscores for', song_name, 'on ', difficulty, ':\nRank\tPlayer\tScore')
-        print_scores(song_name, difficulty)
+        print_scores(song_name, mode, difficulty)
 
     else:
         print('Highscores for', song_name, 'on ', difficulty, ':\nRank\tPlayer\tScore')
-        print_scores(song_name, difficulty)
+        print_scores(song_name, mode, difficulty)
 
 
 
-def check_score(player_score):
-    count = 9
+def check_score(song_name, mode, difficulty, player_score):
+    count = 1
     cnx = mysql.connector.connect(**config)
     cursor = cnx.cursor()
-    search_details(song_name, difficulty)
-    search_scores("SELECT player_name, score FROM leaderboard WHERE song_name = %s AND difficulty = %s ORDER BY score")
-    cursor.execute(search_people, people_data)
+    search_details = (song_name, mode, difficulty)
+    search_scores = ("SELECT player_name, score FROM leaderboard WHERE song_name = %s AND mode = %s AND difficulty = %s ORDER BY score DESC")
+    cursor.execute(search_scores, search_details)
 
     results = cursor.fetchall()
 
@@ -37,33 +38,33 @@ def check_score(player_score):
     cnx.close()
 
     for (player_name, score) in results:
-      if(score<=player_score):
+      if(player_score>score):
         return True
-      count--
-      if count == 0:
-          break
+      count = count+1
+      if count > 10:
+          return False
 
-    return False
+    return True
 
-def add_score(song_name, difficulty, player_name, score):
+def add_score(song_name, mode, difficulty, player_name, score):
     cnx = mysql.connector.connect(**config)
     cursor = cnx.cursor()
     add_new_score = ("INSERT INTO leaderboard "
-                 "(song_name, difficulty, player_name, score) "
-                 "VALUES (%s, %s, %s, %s)")
-    score_data = (song_name, difficulty, player_name, score)
+                 "(song_name, mode, difficulty, player_name, score) "
+                 "VALUES (%s, %s, %s, %s, %s)")
+    score_data = (song_name, mode, difficulty, player_name, score)
     cursor.execute(add_new_score, score_data)
     cnx.commit()
     cursor.close()
     cnx.close()
 
-def print_scores(song_name, difficulty):
+def print_scores(song_name, mode, difficulty):
     count = 1
     cnx = mysql.connector.connect(**config)
     cursor = cnx.cursor()
-    search_details(song_name, difficulty)
-    search_scores("SELECT player_name, score FROM leaderboard WHERE song_name = %s AND difficulty = %s ORDER BY score")
-    cursor.execute(search_people, people_data)
+    search_detail = (song_name, mode, difficulty)
+    search_score = ("SELECT player_name, score FROM leaderboard WHERE song_name = %s AND mode = %s AND difficulty = %s ORDER BY score DESC")
+    cursor.execute(search_score, search_detail)
 
     results = cursor.fetchall()
 
@@ -71,7 +72,7 @@ def print_scores(song_name, difficulty):
     cnx.close()
 
     for (player_name, score) in results:
-      print(count, "\t{}\t {}".format(player_name, score))
-      count++
-      if count == 10:
-          break
+      print("\t{}\t {}".format(player_name, score))
+      count = count+1
+      if count > 10:
+        break

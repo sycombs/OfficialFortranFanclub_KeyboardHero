@@ -10,6 +10,9 @@ import sys
 import json
 import math
 import hollow
+import leaderboard
+
+song_info = ['',1,1]
 
 class gamelogic:
     note_list = []
@@ -105,6 +108,8 @@ class gamelogic:
                 if event.type == pygame.QUIT:
                     done = True
                     pygame.quit()
+                    print(score)
+                    # leaderboard_control(song_info[0], song_info[1], song_info[2], score)
                     sys.exit()
 
             screen.fill(BLACK)
@@ -184,6 +189,8 @@ class gamelogic:
         pygame.quit()
 
         print(score)
+        # leaderboard_control(song_info[0], song_info[1], song_info[2], score)
+
 
     def run_osu(self, song="song.wav"):
         """
@@ -227,6 +234,8 @@ class gamelogic:
                 if event.type == pygame.QUIT:
                     done = True
                     pygame.quit()
+                    print(score)
+                    # leaderboard_control(song_info[0], song_info[1], song_info[2], score)
                     sys.exit()
 
             screen.fill(BLACK)
@@ -270,6 +279,8 @@ class gamelogic:
         pygame.quit()
 
         print(score)
+        # leaderboard_control(song_info[0], song_info[1], song_info[2], score)
+
 
     def run_game(self, song = "song.wav", beatmap_file = "beatmap.json", mode = 1, difficulty = 1):
         """
@@ -280,10 +291,14 @@ class gamelogic:
         @param difficulty: 1 = easy, 2 = normal, 3 = hard
         @post runs game
         """
+        song_info[0] = song
+        song_info[1] = mode
+        song_info[2] = difficulty
+
         if mode == 1:
             self.run_standard(song)
         else:
             self.run_osu(song)
 
-game = gamelogic()
-game.run_game("song.wav", "beatmap.json", 2, 3)
+# game = gamelogic()
+# game.run_game("song.wav", "beatmap.json", 2, 3)
