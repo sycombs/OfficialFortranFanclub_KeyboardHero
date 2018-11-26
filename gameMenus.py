@@ -113,16 +113,22 @@ def song_selection():
     """
 
     root = Tk()
-    filename = filedialog.askopenfilename()
-    filename = os.path.basename(filename)
-    root.destroy()
-    print(filename)
-    with open("parameters.json",'w') as f:
-        json.dump([{'file_name' : filename}], f)
-    h = 'ghc bm_gen.hs -e "main"'
-    os.system(h)
-    gameControls[0] = filename
-    next_menu()
+    filename = filedialog.askopenfilename(filetypes=[("Music Files","*.wav")])
+    if not filename:
+        print('choose a wav file inside of the folder the program is at')
+        root.destroy()
+    else:
+        filename = os.path.basename(filename)
+        root.destroy()
+        print(filename)
+        os.rename(filename, 'song.wav')
+        with open("parameters.json",'w') as f:
+            json.dump([{'file_name' : filename}], f)
+        h = 'ghc bm_gen.hs -e "main"'
+        os.system(h)
+        gameControls[0] = filename
+        os.rename('song.wav', filename)
+        next_menu()
 
 def osu_mode():
     gameControls[2] = 2
