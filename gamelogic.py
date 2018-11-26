@@ -260,9 +260,9 @@ class gamelogic:
         @post runs game
         """
         if mode == 1:
-            self.run_standard()
+            self.run_standard(song)
         else:
-            self.run_osu()
+            self.run_osu(song)
 
-game = gamelogic()
-game.run_game("song.wav", "cry.json", 1, 3)
+# game = gamelogic()
+# game.run_game("song.wav", "cry.json", 1, 3)
