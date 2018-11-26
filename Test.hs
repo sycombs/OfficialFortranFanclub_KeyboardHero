@@ -1,5 +1,7 @@
 module Main where
 
+-- ghc Tester.hs -e "main" > testResults.txt
+
 import Data.Int
 import Test.Hspec
 import qualified BM_Gen as BMG
