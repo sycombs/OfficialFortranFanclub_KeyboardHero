@@ -9,20 +9,20 @@ config = {
   'raise_on_warnings': True
 }
 
+difficultyRank = ['easy', 'medium', 'hard']
+
 def leaderboard_control(song_name, mode, difficulty, score):
     song_name = song_name[:-4]
     if check_score(song_name, mode, difficulty, score):
         print('Congratulations! You got a High Score!\n')
         player_name = input('Enter Name:')
         add_score(song_name, mode, difficulty, player_name, score)
-        print('Highscores for', song_name, 'on ', difficulty, ':\nRank\tPlayer\tScore')
+        print('Highscores for', song_name, 'on ', difficultyRank[difficulty-1], ':\nRank\tPlayer\t\tScore')
         print_scores(song_name, mode, difficulty)
 
     else:
-        print('Highscores for', song_name, 'on ', difficulty, ':\nRank\tPlayer\tScore')
+        print('Highscores for', song_name, 'on ', difficultyRank[difficulty-1], ':\nRank\tPlayer\t\tScore')
         print_scores(song_name, mode, difficulty)
-
-
 
 def check_score(song_name, mode, difficulty, player_score):
     count = 1
@@ -72,7 +72,7 @@ def print_scores(song_name, mode, difficulty):
     cnx.close()
 
     for (player_name, score) in results:
-      print("\t{}\t {}".format(player_name, score))
+      print("{}\t{}\t\t{}".format(count, player_name, score))
       count = count+1
       if count > 10:
         break

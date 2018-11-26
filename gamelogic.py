@@ -10,7 +10,7 @@ import sys
 import json
 import math
 import hollow
-import leaderboard
+from leaderboard import *
 
 song_info = ['',1,1]
 
