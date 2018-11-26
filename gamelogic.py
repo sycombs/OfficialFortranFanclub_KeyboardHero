@@ -17,20 +17,20 @@ song_info = ['',1,1]
 class gamelogic:
     note_list = []
     map = []                  #standard mode only
-    def generate(self, difficulty):
+    def generate(self, beatmap_file, difficulty):
         """
         @pre need valid beatmap file
         @param difficulty: 1 = easy (default), 2 = normal, 3 = hard
         @post generates a list of note dictionaries
         """
-        f = open("cry.json", 'r')
+        f = open(beatmap_file, 'r')
         list = f.read()
         init_list = json.loads(list)
 
         # Constrain x & y to game window
         for item in init_list:
-            item["osu"]["x"] = math.ceil(item["osu"]["x"]) % 800
-            item["osu"]["y"] = math.ceil(item["osu"]["y"]) % 650
+            item["osu"]["x"] = math.ceil(item["osu"]["x"])
+            item["osu"]["y"] = math.ceil(item["osu"]["y"])
 
         for i in range(0, len(init_list), (5 - difficulty)):
             self.note_list.append(init_list[i])
@@ -86,7 +86,7 @@ class gamelogic:
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("Keyboard Hero")
 
-        self.generate(difficulty)
+        self.generate(beatmap_file, difficulty)
         self.map(note_width, note_height)
 
         clock = pygame.time.Clock()
@@ -219,7 +219,7 @@ class gamelogic:
         screen = pygame.display.set_mode(SIZE)
         pygame.display.set_caption("'Osu' Hero")
 
-        self.generate(difficulty)
+        self.generate(beatmap_file, difficulty)
         clock = pygame.time.Clock()
         pygame.mixer.music.load(song)
         pygame.mixer.music.play(0)
@@ -299,3 +299,6 @@ class gamelogic:
             self.run_standard(song, beatmap_file, difficulty)
         else:
             self.run_osu(song, beatmap_file, difficulty)
+
+game = gamelogic()
+game.run_game("song.wav", "beatmap.json", 1, 1)
