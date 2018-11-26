@@ -7,6 +7,11 @@ import pygame as pyg
 import sys
 from Buttons import *
 from Menu import *
+from gamelogic import *
+from tkinter import *
+from tkinter import filedialog
+import os
+import json
 
 global WHITE, BLACK, TURQUOISE, GREY, menuList, menuCounter
 menuCounter = [0]
@@ -16,7 +21,11 @@ TURQUOISE = (0,245,255)
 GREY = (211,211,211)
 
 def main():
-
+    """
+    @pre none
+    @param none
+    @post Handles the creation and navigation of menus for the game
+    """
     pyg.init()
     pyg.display.set_caption('Keyboard Hero!!!!')
     gameSurf = pyg.display.set_mode((800, 600))
@@ -44,35 +53,85 @@ def main():
         pygame.display.update()
 
 def quit_game():
-    pygame.quit()
+    """
+    @pre none
+    @param none
+    @post ends the pygame and quits to terminal
+    """
+    pyg.quit()
     sys.exit()
 
 def previous_menu():
+    """
+    @pre none
+    @param none
+    @post decriments the menu by one
+    """
     menuCounter[0]= menuCounter[0]-1
 
 def next_menu():
+    """
+    @pre none
+    @param none
+    @post increments the menu by one
+    """
     menuCounter[0]= menuCounter[0]+1
 
 def easy():
-    print("easy")
+    """
+    @pre none
+    @param none
+    @post calls the run_game function
+    """
+    run_game("song.wav")
 
 def med():
-    print("medium")
+    """
+    @pre none
+    @param none
+    @post prints comming soon
+    """
+    print("Comming soon!")
 
 def hard():
-    print("hard")
+    """
+    @pre none
+    @param none
+    @post prints comming soon
+    """
+    print("Comming soon!")
+
+def song_selection():
+    """
+    @pre none
+    @param none
+    @post prints comming soon
+    """
+
+    root = Tk()
+    filename = filedialog.askopenfilename()
+    filename = os.path.basename(filename)
+    root.destroy()
+    print(filename)
+    with open("parameters.json",'w') as f:
+        json.dump([{'file_name' : filename}], f)
+    h = 'ghc bm_gen.hs -e "main"'
+    os.system(h)
+    next_menu()
+
+
 
 mainMenu = gui_menu(WHITE, 0, 0, 800, 600, "Keyboard Hero!!!!")
 mainMenu.add_button(gui_button(TURQUOISE, 325, 150, 150, 80, "Play Game", True, next_menu))
 mainMenu.add_button(gui_button(TURQUOISE, 325, 300, 150, 80, "Quit", True, quit_game))
 songMenu = gui_menu(WHITE, 0, 0, 800, 800, "Select A Song!")
-songMenu.add_button(gui_button(TURQUOISE, 350, 150, 100, 80, "Flamingo by Kero Kero Bonito", True, next_menu))
-songMenu.add_button(gui_button(TURQUOISE, 350, 300, 100, 80, "Back", True, previous_menu))
+songMenu.add_button(gui_button(TURQUOISE, 175, 150, 450, 80, "Select Song", True, song_selection))
+songMenu.add_button(gui_button(TURQUOISE, 175, 300, 450, 80, "Back", True, previous_menu))
 modeMenu = gui_menu(WHITE, 0, 0, 800, 800, "Choose a Difficulty")
-modeMenu.add_button(gui_button(TURQUOISE, 350, 150, 100, 80, "Easy", True, easy))
-modeMenu.add_button(gui_button(TURQUOISE, 350, 250, 100, 80, "Medium", True, med))
-modeMenu.add_button(gui_button(TURQUOISE, 350, 350, 100, 80, "Hard", True, hard))
-modeMenu.add_button(gui_button(TURQUOISE, 350, 450, 100, 80, "Back", True, previous_menu))
+modeMenu.add_button(gui_button(TURQUOISE, 325, 150, 150, 80, "Easy", True, easy))
+modeMenu.add_button(gui_button(TURQUOISE, 325, 250, 150, 80, "Medium", True, med))
+modeMenu.add_button(gui_button(TURQUOISE, 325, 350, 150, 80, "Hard", True, hard))
+modeMenu.add_button(gui_button(TURQUOISE, 325, 450, 150, 80, "Back", True, previous_menu))
 menuList = [mainMenu, songMenu, modeMenu]
 
 main()
