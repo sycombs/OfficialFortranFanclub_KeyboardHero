@@ -170,6 +170,8 @@ class gamelogic:
                     else:
                         pygame.draw.rect(screen, ORANGE, self.map[i])
                 self.map[i][1] += 5 #Increments on y
+                if self.map[i][1] in range(650,655):
+                    current_combo = 1
 
             score_text = hollow.textOutline(font,"Score: " + str(score),GREY,WHITE)
             combo_text = hollow.textOutline(font,"Combo: x" + str(current_combo),GREY,WHITE)
