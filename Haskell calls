@@ -1,0 +1,9 @@
+import os
+h = ghc Tester.hs -e "main" > testResults.txt
+os.sys(h)
+
+
+
+import os
+h = ghc bm_gen.hs -e "main"
+os.sys(h)
