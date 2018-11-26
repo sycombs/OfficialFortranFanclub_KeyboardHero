@@ -11,13 +11,14 @@ import GHC.Generics
 import Data.Complex
 import System.IO
 import System.Exit
--- import qualified Data.ByteString.Lazy as BL
+import Control.Exception
 
 main = do
   -- Load JSON to read parameters
   wav <- getWAVEFile "song.wav"
   let imps = abs.head <$> waveSamples wav :: [WAVESample]
-  encodeFile "beatmap.json" (findImpulse 1 imps)
+  return $ findImpulse 1 imps
+  --encodeFile "beatmap.json" (findImpulse 1 imps)
 
 newtype GameParam = GameParam {
    file_name :: String
@@ -25,6 +26,11 @@ newtype GameParam = GameParam {
 
 instance FromJSON GameParam
 
+
+data MyException = ThisException | ThatException
+    deriving Show
+
+instance Exception MyException
 
 boundsCheck :: (Double, Double, Double) -> Double
 boundsCheck (dimVal, dMin, dMax)
@@ -34,32 +40,32 @@ boundsCheck (dimVal, dMin, dMax)
 
 findImpulse :: Integral a => Double -> [a] -> [Impulse]
 findImpulse _ []  = []
-findImpulse i xs  = (differenceFinder f p1) ++ (findImpulse (i + 1) p2)
-  where p1 = take 1470 xs
-        p2 = drop 1470 xs
-        f  = (i * 1470) + 1
+findImpulse i xs  = (differenceFinder actFrame p1) ++ (findImpulse (i + 1) p2)
+  where p1        = take 1470 xs
+        p2        = drop 1470 xs
+        actFrame  = (i * 1470) + 1
 
 differenceFinder :: Integral a => Double -> [a] -> [Impulse]
 differenceFinder frame ss
-  | d > 39000 = [i]
-  | otherwise = [ ]
-  where a = foldl' (+) 0 $ take 735 ss
-        b = foldl' (+) 0 $ drop 735 ss
-        d = (abs $ a - b) `div` 50000
-        i = processImpulse $ frame :+ (fromIntegral d)
+  | difference > 39000 = [impulse]
+  | otherwise  = []
+  where partition_1 = foldl' (+) 0 $ take 735 ss
+        partition_2 = foldl' (+) 0 $ drop 735 ss
+        difference  = (abs $ partition_1 - partition_2) `div` 50000
+        impulse     = processImpulse $ frame :+ (fromIntegral difference)
 
 
 processImpulse :: Complex Double -> Impulse
-processImpulse c = Impulse a r o
-  where a = toInteger $ ceiling $ realPart c
-        r = RB $ genButton a
-        o = genCircle c
+processImpulse compDoub = Impulse actFrame rb osu
+  where actFrame        = toInteger $ ceiling $ realPart compDoub
+        rb              = RB $ genButton actFrame
+        osu             = genCircle compDoub
 
 
 {- Button Generation Functions -}
 
 genButton :: Integer -> Char
-genButton d -- And hold / not hold?
+genButton d
   | m == 0    = 'U'
   | m == 1    = 'D'
   | m == 2    = 'L'
@@ -71,9 +77,9 @@ genCircle :: Complex Double -> Osu
 genCircle d = Osu xPos yPos -- Drag and not drag data?
   where width  = 725 -- w = Width - 75 (Width and height from game board file)
         height = 525 -- h = Height - 75
-        xPos   = boundsCheck ((radius * (cos theta)), minVal,  width)
-        yPos   = boundsCheck ((radius * (sin theta)), minVal, height)
-        radius = magnitude d
+        xPos   = (toInteger radius) `mod` width
+        yPos   = (toInteger radius) `mod` height
+        radius = ceiling $ magnitude d
         theta  = phase d
         minVal = 50
 
@@ -90,9 +96,14 @@ newtype RB = RB {
   } deriving (Generic, Show)
 
 data Osu = Osu {
-  x         :: Double,
-  y         :: Double
+  x         :: Integer,
+  y         :: Integer
   } deriving (Generic, Show)
+
+-- data Osu = Osu {
+--   x         :: Double,
+--   y         :: Double
+--   } deriving (Generic, Show)
 
 {- JSON Encoders / Decoders -}
 
