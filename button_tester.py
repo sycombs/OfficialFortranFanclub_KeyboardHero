@@ -1,74 +1,62 @@
 '''
 button_tester.py
-testing buttons.py
+testing buttons.py & scoring
 '''
 
 from Buttons import *
-
-pygame.init()
-gray = (122,122,122)
-white = (255,255,255)
-black = (0,0,0)
-green = (0,255,0)
-gameDisplay = pygame.display.set_mode((400,400))
-gameDisplay.fill((255,255,255))
-pygame.display.set_caption('Button Tester')
-def button_printer():
-    print ('clicked')
-
-test_button = gui_button(green,200,200,100,60,'Test',True,button_printer)
-left_button = gui_button(green,1,339,99,60,'Left',True,button_printer)
-up_button = gui_button(green,101,339,99,60,'Up',True,button_printer)
-down_button = gui_button(green,201,339,99,60,'Down',True,button_printer)
-right_button = gui_button(green,301,339,99,60,'Right',True,button_printer)
-button_list = [left_button,up_button,down_button,right_button]
-for button in button_list:
-    button.draw(gameDisplay)
+from Scoring import *
 
 
-running = True
-while running:
-    for event in pygame.event.get():
-        for button in button_list:
-            if button.get_rect().collidepoint(pygame.mouse.get_pos()):
-                button.mouse_over = True
-            else:
-                button.mouse_over = False
-            button.draw(gameDisplay)
-        if event.type == pygame.QUIT:
-            running = False
-
-        elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            m_rect = pygame.rect.Rect(pygame.mouse.get_pos(), (1,1))
-            for button in button_list:
-                if button.get_rect().colliderect(m_rect):
-                    button.on_click()
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:
-        left_button.mouse_over = True
-        left_button.on_click()
+def test_scoring_return_score():
+    print("Increment_score returns correct values for no combo:", end = " ")
+    if (increment_score(1,1) == (1,1)):
+        print("True")
     else:
-        left_button.mouse_over = False
-        left_button.clicked = False
-    if keys[pygame.K_UP]:
-        up_button.mouse_over = True
-        up_button.on_click()
-    else:
-        up_button.mouse_over = False
-        up_button.clicked = False
-    if keys[pygame.K_DOWN]:
-        down_button.mouse_over = True
-        down_button.on_click()
-    else:
-        down_button.mouse_over = False
-        down_button.clicked = False
-    if keys[pygame.K_RIGHT]:
-        right_button.mouse_over = True
-        right_button.on_click()
-    else:
-        right_button.mouse_over = False
-        right_button.clicked = False
-    for button in button_list:
-        button.draw(gameDisplay)
+        print("False")
 
-    pygame.display.update()
+def test_scoring_inc_combo():
+    print("Increment_score correctly increments combo when collisions > 1:", end=" ")
+    if (increment_score(2,1) == (2,2)):
+        print("True")
+    else:
+        print("False")
+
+def test_scoring_dec_combo():
+    print("Increment_score correctly returns combo to 1 when collisions == 1:", end=" ")
+    if (increment_score(1,2) == (1,1)):
+        print("True")
+    else:
+        print("False")
+
+def test_button_get_rect():
+    print("get_rect correctly returns pygame rect object:", end=" ")
+    button = gui_button((0,0,0), 0, 0, 40, 40, "None")
+    if (isinstance(button.get_rect(),pygame.Rect)):
+        print("True")
+    else:
+        print("False")
+        
+def test_key_button_hitbox():
+    print("check_hitbox correctly returns number of collisions:", end=" ")
+    button = key_button((0,0,0),0,0,40,40,"None")
+    rect_no_collisions = pygame.rect.Rect(41,41,10,10)
+    rect_three_collisions = pygame.rect.Rect(0,0,40,40)
+    if button.check_hitbox(rect_no_collisions) == 0:
+        if button.check_hitbox(rect_three_collisions) == 3:
+            print("True")
+        else:
+            print("False")
+    else:
+        print("False")
+
+
+
+def run_tests():
+    test_scoring_return_score()
+    test_scoring_inc_combo()
+    test_scoring_dec_combo()
+    test_button_get_rect()
+    test_key_button_hitbox()
+
+if __name__ == '__main__':
+    run_tests()
