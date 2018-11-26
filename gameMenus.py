@@ -12,6 +12,7 @@ from tkinter import *
 from tkinter import filedialog
 import os
 import json
+import button_tester
 
 global WHITE, BLACK, TURQUOISE, GREY, menuList, menuCounter
 menuCounter = [0]
@@ -138,6 +139,11 @@ def reg_mode():
     gameControls[2] = 1
     next_menu()
 
+def run_tests():
+    h = 'ghc Tester.hs -e "main" > testResults.txt'
+    os.system(h)
+    button_tester.run_tests()
+
 
 def play_game():
     game = gamelogic()
@@ -146,7 +152,8 @@ def play_game():
 
 mainMenu = gui_menu(WHITE, 0, 0, 800, 600, "Keyboard Hero!!!!")
 mainMenu.add_button(gui_button(TURQUOISE, 325, 150, 150, 80, "Play Game", True, next_menu))
-mainMenu.add_button(gui_button(TURQUOISE, 325, 300, 150, 80, "Quit", True, quit_game))
+mainMenu.add_button(gui_button(TURQUOISE, 325, 275, 150, 80, "Testing", True, run_tests))
+mainMenu.add_button(gui_button(TURQUOISE, 325, 400, 150, 80, "Quit", True, quit_game))
 songMenu = gui_menu(WHITE, 0, 0, 800, 800, "Select A Song!")
 songMenu.add_button(gui_button(TURQUOISE, 300, 150, 200, 80, "Select Song", True, song_selection))
 songMenu.add_button(gui_button(TURQUOISE, 300, 300, 200, 80, "Back", True, previous_menu))
