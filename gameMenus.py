@@ -125,7 +125,7 @@ def song_selection():
         os.rename(filename, 'song.wav')
         with open("parameters.json",'w') as f:
             json.dump([{'file_name' : filename}], f)
-        h = 'ghc bm_gen.hs -e "main"'
+        h = 'ghc BM_Gen.hs -e "main"'
         os.system(h)
         gameControls[0] = filename
         os.rename('song.wav', filename)
