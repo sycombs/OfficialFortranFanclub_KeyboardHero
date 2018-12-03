@@ -11,7 +11,7 @@ import json
 import math
 import hollow
 from randomNote import *
-from leaderboard import *
+# from leaderboard import *
 
 song_info = ['',1,1]
 
@@ -301,3 +301,6 @@ class gamelogic:
             self.run_standard(song, beatmap_file, difficulty)
         else:
             self.run_osu(song, beatmap_file, difficulty)
+
+game = gamelogic()
+game.run_game("song.wav", "beatmap.json", 1, 1)
