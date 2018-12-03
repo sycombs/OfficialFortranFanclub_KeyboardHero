@@ -32,7 +32,7 @@ class gamelogic:
         for item in init_list:
             item["osu"]["x"] = math.ceil(item["osu"]["x"])
             item["osu"]["y"] = math.ceil(item["osu"]["y"])
-            item["rb"]["button"] = item["rb"]["button"]
+            #item["rb"]["button"] = item["rb"]["button"]
 
         for i in range(0, len(init_list), (5 - difficulty)):
             self.note_list.append(init_list[i])
@@ -48,11 +48,11 @@ class gamelogic:
         at = 0
         for item in self.note_list:
             at = ((item["act_frame"]/44100) * 300) + 550
-            if item["rb"]["button"] == 'U':
+            if item["rb"] == 'U':
                 self.map.append(pygame.Rect((200, -at), (width, height)))
-            elif item["rb"]["button"] == 'D':
+            elif item["rb"] == 'D':
                 self.map.append(pygame.Rect((400, -at), (width, height)))
-            elif item["rb"]["button"] == 'L':
+            elif item["rb"] == 'L':
                 self.map.append(pygame.Rect((0, -at), (width, height)))
             else:
                 self.map.append(pygame.Rect((600, -at), (width, height)))
