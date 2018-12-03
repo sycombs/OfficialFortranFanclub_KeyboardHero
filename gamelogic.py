@@ -32,7 +32,7 @@ class gamelogic:
         for item in init_list:
             item["osu"]["x"] = math.ceil(item["osu"]["x"])
             item["osu"]["y"] = math.ceil(item["osu"]["y"])
-            item["rb"]["button"] = randomNote()
+            item["rb"]["button"] = item["rb"]["button"]
 
         for i in range(0, len(init_list), (5 - difficulty)):
             self.note_list.append(init_list[i])
