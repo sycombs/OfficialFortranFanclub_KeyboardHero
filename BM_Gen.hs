@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveGeneric #-}
 module BM_Gen where
 
--- ghc bm_gen.hs -e "main"
+-- ghc BM_Gen.hs -e "main"
 
 import Data.Aeson
 import Data.Complex
@@ -15,8 +15,8 @@ main = do
   wav <- getWAVEFile "song.wav"
   let subSamp = waveSamples wav
   let ss = map fromIntegral $ head <$> subSamp
-  let i = findImpulses 1 ss
-  encodeFile "beatmap.json" (findImpulses 1 ss)
+  let i = findImpulse 1 ss
+  encodeFile "beatmap.json" (findImpulse 1 ss)
 
 genButton q
   | r ==    4 = Just 'U'
@@ -38,15 +38,14 @@ boundsCheck (dimVal, dMin, dMax)
   | dimVal > dMax = dMax
   | otherwise     = dimVal
 
-
-findImpulses _ [] = []
-findImpulses i xs = do
+findImpulse _ [] = []
+findImpulse i xs = do
   let res = checkPartition frame (fst part)
   case res of
     Nothing -> next
     Just r' -> [r'] ++ next
   where part  = splitAt 1470 xs
-        next  = findImpulses (i + 1) (snd part)
+        next  = findImpulse (i + 1) (snd part)
         frame = (1470 * i) + 1
 
 checkPartition f ps =
