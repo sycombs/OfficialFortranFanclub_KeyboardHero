@@ -34,7 +34,7 @@ class gamelogic:
             item["osu"]["y"] = math.ceil(item["osu"]["y"])
             #item["rb"]["button"] = item["rb"]["button"]
 
-        for i in range(0, len(init_list), (5 - difficulty)):
+        for i in range(0, len(init_list), (7 - difficulty)):
             self.note_list.append(init_list[i])
 
     def map(self, width, height):
@@ -72,6 +72,12 @@ class gamelogic:
         YELLOW = [255, 203, 73] # down
         ORANGE = [255, 77, 22] # right
         GREY = [100,100,100] #for text
+
+        BG = [193, 246, 255]
+        LEFT_NOTE = [140, 239, 255]
+        UP_NOTE = [96, 233, 255]
+        DOWN_NOTE = [47, 214, 239]
+        RIGHT_NOTE = [0, 176, 204]
 
         BUTTON_PINK = [181, 61, 129]
         BUTTON_BLUE = [14, 89, 132]
@@ -114,7 +120,7 @@ class gamelogic:
                     leaderboard_control(song_info[0], song_info[1], song_info[2], score)
                     sys.exit()
 
-            screen.fill(BLACK)
+            screen.fill(WHITE)
 
             keys = pygame.key.get_pressed()
             if keys[pygame.K_LEFT]:
@@ -240,7 +246,7 @@ class gamelogic:
                     leaderboard_control(song_info[0], song_info[1], song_info[2], score)
                     sys.exit()
 
-            screen.fill(BLACK)
+            screen.fill(WHITE)
 
             mouse = pygame.mouse.get_pressed()
             pos = pygame.mouse.get_pos()
@@ -301,6 +307,3 @@ class gamelogic:
             self.run_standard(song, beatmap_file, difficulty)
         else:
             self.run_osu(song, beatmap_file, difficulty)
-
-game = gamelogic()
-game.run_game("song.wav", "beatmap.json", 1, 1)
