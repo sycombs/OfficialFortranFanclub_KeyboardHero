@@ -37,6 +37,10 @@ class gui_button:
         self.mouse_over = False
 
     def get_rect(self):
+        '''
+        @brief return button's pygame rect object for collision purposes
+        @return pygame rect object
+        '''
         return self.rect
 
     def on_click(self):
@@ -51,6 +55,12 @@ class gui_button:
                 return self.click_action()
 
     def place_self(self,window,x,y):
+        '''
+        @brief redraw button at given x,y location
+        @param window: pygame.surface: window on which to draw button
+        @param x: int: x location to be redrawn
+        @param y: int: y location to be redrawn
+        '''
         self.x = x
         self.y = y
         self.draw(window,self.outline)
@@ -141,10 +151,22 @@ class circle_button:
             pygame.draw.circle(window, (0,0,0), self.pos, self.radius + 2, 3)
 
     def place_self(self, window, x, y):
+        '''
+        @brief redraw button at given x, y location on given window
+        @param window: pygame surface: window on which to redraw button
+        @param x: int: x location of new center of circle button
+        @param y: int: y location of new center of circle button
+        '''
         self.pos = (x,y)
         self.draw(window)
 
     def is_clicked(self, mouse_x, mouse_y):
+        '''
+        @brief helper function to determine if passed in mouse coordinates collide with button
+        @param mouse_x: int: x position of mouse cursor
+        @param mouse_y: int: y position of mouse cursor
+        @return bool: True if position collides with button, False otherwise
+        '''
         if mouse_x in range(self.pos[0] - self.radius, self.pos[0] + self.radius) and mouse_y in range(self.pos[1] - self.radius, self.pos[1] + self.radius):
             return True
         return False
