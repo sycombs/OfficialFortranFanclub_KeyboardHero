@@ -6,16 +6,21 @@ Dependencies
 
 We've used PyGame for every single project this semester
 
+--- MySQL
+Dependencies
+   - MySQL Connector/Python : https://dev.mysql.com/doc/connector-python/en/
+   Copyright (c) 2011, 2018, Oracle and/or its affiliates. All rights reserved.
+   MySQL Connector/Python allowed me to access MySQL databases from Python
 
 --- Haskell
 Dependencies
    - WAVE : https://hackage.haskell.org/package/WAVE
    WAVE made reading audio data a breeze and I could not have done anything without it
-   
+
   - Aeson : https://hackage.haskell.org/package/aeson-1.4.1.0
   Bryan O'Sullivan <bos@serpentine.com>
   Aeson made the generating the output and using the output much easier thanks to how easy it makes encoding JSON data
-   
+
   - Hspec : http://hackage.haskell.org/package/hspec
   Simon Hengel <sol@typeful.net>
   Hspec made testing possible and intuitive (although you don't get to see that in the project4 branch. Checkout the demo branch instead!)
@@ -32,5 +37,5 @@ Please visit and support the developers at
 https://www.gnu.org/software/octave/donate.html
 
 
-Thanks to the rest of memebers of the Official Fortran Fanclub for putting up with my talk of 
+Thanks to the rest of memebers of the Official Fortran Fanclub for putting up with my talk of
 monads, 5 AM group messages, and everything else
