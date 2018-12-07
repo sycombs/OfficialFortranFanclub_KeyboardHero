@@ -13,7 +13,7 @@ import qualified BM_Gen as BMG
 -- | main makes all the necessary function calls to generate a beatmap using
 -- and can be called via the console with the following command
 -- !!! Note: Almost all of these functions have been deprecated as of the
--- demo_branch's creation. Don't just my abilities based on this !!!
+-- demo_branch's creation. Don't judge my abilities based on this !!!
 --
 -- >>> ghc bm_gen.hs -e "main" > "outputfilename.txt"
 --
