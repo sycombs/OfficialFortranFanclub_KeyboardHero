@@ -132,20 +132,40 @@ def song_selection():
         next_menu()
 
 def osu_mode():
+    """
+    @pre none
+    @param none
+    @post sets the mode to be 2 for osu mode.
+    """
     gameControls[2] = 2
     next_menu()
 
 def reg_mode():
+    """
+    @pre none
+    @param none
+    @post sets the mode to be 1 for regular mode.
+    """
     gameControls[2] = 1
     next_menu()
 
 def run_tests():
+    """
+    @pre none
+    @param none
+    @post runs all of the tests and prints them to a text file called testResults.txt
+    """
     h = 'ghc Tester.hs -e "main" > testResults.txt'
     os.system(h)
     button_tester.run_tests()
 
 
 def play_game():
+    """
+    @pre none
+    @param none
+    @post Starts the game with the given conditions in gameControls
+    """
     game = gamelogic()
     game.run_game(gameControls[0], gameControls[1], gameControls[2], gameControls[3])
 
