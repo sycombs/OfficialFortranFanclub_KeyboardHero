@@ -1,3 +1,7 @@
+{-|
+Module      : Main
+-}
+
 module Main where
 
 -- ghc Tester.hs -e "main" > testResults.txt
@@ -6,6 +10,13 @@ import Data.Int
 import Test.Hspec
 import qualified BM_Gen as BMG
 
+-- | main makes all the necessary function calls to generate a beatmap using
+-- and can be called via the console with the following command
+-- !!! Note: Almost all of these functions have been deprecated as of the
+-- demo_branch's creation. Don't just my abilities based on this !!!
+--
+-- >>> ghc bm_gen.hs -e "main" > "outputfilename.txt"
+--
 main :: IO ()
 main = hspec $ do
   -- I have no idea why these have to be here, but they do
@@ -16,6 +27,8 @@ main = hspec $ do
   let smlD       = 99999                            :: Double
   let negD       = -44100                           :: Double
 
+  -- boundsCheck tests all ensure that any outputted Osu style circles are within a legal playing area
+  --
   describe "boundsCheck" $ do
     it "Forces circle within a dimension minimum" $
       BMG.boundsCheck(-1, 50, 850) `shouldBe` 50
@@ -30,6 +43,9 @@ main = hspec $ do
   --   it "Doesn't crash with negative values" $
   --     BMG.genButton(-1) `shouldBe` 'R'
 
+  -- differenceFinder tests ensure that differenceFinder returns an empty list when fed invalid, useless, or
+  -- 'mirrored' data (that is, when each part of a partition is equal so the data is just duplicatedxactly
+  --
   describe "differenceFinder" $ do
     it "Returns [] when fed a huge stream of zeros" $
       length (BMG.differenceFinder bigD zeroStream) `shouldBe` 0
@@ -46,6 +62,9 @@ main = hspec $ do
     it "Returns [] when fed a stream of duplicates" $
       length (BMG.differenceFinder medD dupeStream) `shouldBe` 0
 
+  -- findImpulse tests are essentially the exact same thing as the differenceFinder tests, but they ensure that
+  -- we are iterating through the whole of our test data properly
+  --
   describe "findImpulse" $ do
     it "Returns [] when fed a huge stream of zeros" $
       length (BMG.findImpulse bigD zeroStream) `shouldBe` 0
@@ -76,3 +95,4 @@ main = hspec $ do
 
 -- it "Should not accept a fractional number" $
 --   BMG.genButton(1.5) `shouldBe` 'A'
+
